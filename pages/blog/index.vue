@@ -1,13 +1,16 @@
 <template>
-	<h1>Home</h1>
+	<h1>Blog</h1>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-
 export default Vue.extend({
 	head: {
-		title: 'Home | viniboscoa.dev',
+		title: 'Blog | viniboscoa.dev',
 	},
 });
 </script>
+
+<style>
+
+</style>

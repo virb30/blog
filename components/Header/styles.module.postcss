@@ -1,0 +1,42 @@
+.headerContainer {
+	@apply h-20 border-0 border-b border-gray-800 border-solid;
+}
+
+.headerContent {
+	@apply max-w-6xl h-20 my-0 mx-auto p-8 flex items-center;
+
+	& nav {
+		@apply ml-20 h-20;
+
+		& a {
+			@apply inline-block relative py-0 px-2 h-20 text-gray-300;
+
+			line-height: 5rem;
+			transition: color 0.2s;
+
+			& + a {
+				@apply ml-8;
+			}
+
+			&:hover {
+				@apply text-white;
+			}
+
+			&.active {
+				@apply text-white font-bold;
+			}
+
+			&.active::after {
+				content: "";
+				@apply w-full absolute left-0 bg-indigo-500;
+				height: 3px;
+				border-radius: 3px 3px 0 0;
+				bottom: 1px;
+			}
+		}
+	}
+
+	& button {
+		@apply ml-auto;
+	}
+}
