@@ -1,5 +1,9 @@
 <template>
-	<h1>Home</h1>
+	<main>
+		<div :class="$style.container">
+			<Profile />
+		</div>
+	</main>
 </template>
 
 <script lang="ts">
@@ -11,3 +15,7 @@ export default Vue.extend({
 	},
 });
 </script>
+
+<style lang="postcss" scoped module src="./style.module.postcss">
+
+</style>
