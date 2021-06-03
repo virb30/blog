@@ -1,5 +1,7 @@
 <template>
-	<h1>Blog</h1>
+	<main>
+		<h1>Blog</h1>
+	</main>
 </template>
 
 <script lang="ts">

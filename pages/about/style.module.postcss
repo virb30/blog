@@ -1,3 +1,38 @@
-.container {
-	@apply flex;
+.content {
+	@apply flex flex-col lg:flex-row m-auto max-w-6xl;
+
+	& aside {
+		@apply flex flex-col justify-center items-center w-full;
+	}
+
+	& section {
+		@apply p-6 mt-12;
+
+		& h1 {
+			@apply text-2xl;
+		}
+
+		& p {
+			@apply text-lg leading-6 my-2 text-justify;
+		}
+	}
+}
+
+.profileContainer {
+	@apply my-6;
+}
+
+.textBox {
+	@apply p-6;
+
+	& h1 {
+		@apply text-2xl;
+	}
+
+	& p {
+	}
+
+	& + div {
+		@apply mt-6;
+	}
 }

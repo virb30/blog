@@ -1,21 +1,45 @@
 <template>
-	<main :class="$style.container">
+	<main :class="$style.content">
 		<aside>
-			<div :class="$style.profile">
+			<div :class="$style.profileContainer">
 				<Profile />
 			</div>
-			<div :class="$style.summary"></div>
 		</aside>
 
 		<section>
-			<h1>Sobre</h1>
-			<p>
-				Engenheiro de Computação, especialista em segurança da informação e apaixonado por tecnologia. Atuo como desenvolvedor de sistemas com ênfase em aplicações Web.
-				Desenvolver além da minha profissão, meu hobby. Sou capaz de navegar facilmente entre os mundos frontend e backend, mas minha preferência é o backend.
-				Recentemente tenho me aventurado no mundo do Data Science.
-			</p>
-			<p>Gosto de desafios e resolver problemas dos mais variados tipos.</p>
-			<p>Estou sempre aprendendo algo novo.</p>
+			<div :class="$style.textBox">
+				<h1>Sobre</h1>
+				<p>
+					Engenheiro de Computação, especialista em segurança da informação e apaixonado por tecnologia com mais de 7 anos de experiência como desenvolvendor de sistemas.
+				</p>
+				<p>
+					Em busca de se tornar um profissional completo, seu perfil é generalista, capaz de navegar entre backend e frontend com facilidade. Domina o PHP, Laravel e Vue.js.
+					Conhece suficientemente bem Python e Django e recentemente se aventura no mundo do Data Science.
+				</p>
+				<p>
+					Gosta de desafios e resolver problemas dos mais variados tipos e sempre aprender algo novo.
+				</p>
+			</div>
+
+			<div :class="$style.textBox">
+				<h1>Tecnologias</h1>
+				<p>
+					<strong>Back-end: </strong>
+					PHP / Laravel / CodeIgniter 3, Python / Django, Javascript, Typescript, Node / Express / Nestjs
+				</p>
+				<p>
+					<strong>Front-end:</strong>
+					HTML, CSS, , Vue.js / Nuxt, React / Next, jQuery
+				</p>
+				<p>
+					<strong>Banco de dados:</strong>
+					PostgreSQL, MySQL/MariaDB, Oracle
+				</p>
+				<p>
+					<strong>Ferramentas:</strong>
+					Git, Linux Docker
+				</p>
+			</div>
 		</section>
 	</main>
 </template>
