@@ -1,6 +1,9 @@
 <template>
 	<header :class="$style.headerContainer">
 		<div :class="$style.headerContent">
+			<h1 class="text-indigo-600 dark:text-indigo-300 text-3xl">
+				Vinícius Bôscoa
+			</h1>
 			<nav>
 				<NuxtLink exact to="/" :active-class="$style.active" class="hover:text-black dark-hover:text-white">
 					Home
