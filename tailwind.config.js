@@ -9,12 +9,19 @@ module.exports = {
 			'./nuxt.config.{js,ts}',
 		],
 	},
-	darkMode: false, // or 'media' or 'class'
+	darkMode: 'class', // or 'media' or 'class'
 	theme: {
+		darkSelector: '.dark',
 		extend: {},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd'],
+			borderColor: ['dark', 'dark-disabled', 'dark-focus', 'dark-focus-within'],
+			textColor: ['dark', 'dark-hover', 'dark-active', 'dark-placeholder', 'hover'],
+		},
 	},
-	plugins: [],
+	plugins: [
+		require('tailwindcss-dark-mode')(),
+	],
 };

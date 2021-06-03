@@ -1,15 +1,15 @@
 .headerContainer {
-	@apply h-20 border-0 border-b border-gray-800 border-solid;
+	@apply h-20 border-0 border-b border-solid border-gray-400 dark:border-gray-100;
 }
 
 .headerContent {
-	@apply max-w-6xl h-20 my-0 mx-auto p-8 flex items-center;
+	@apply max-w-6xl h-20 my-0 mx-auto p-8 flex items-center justify-between;
 
 	& nav {
 		@apply ml-20 h-20;
 
 		& a {
-			@apply inline-block relative py-0 px-2 h-20 text-gray-300;
+			@apply inline-block relative py-0 px-2 h-20;
 
 			line-height: 5rem;
 			transition: color 0.2s;
@@ -19,18 +19,17 @@
 			}
 
 			&:hover {
-				@apply text-white;
+				@apply font-bold;
 			}
 
 			&.active {
-				@apply text-white font-bold;
+				@apply font-bold;
 			}
 
 			&.active::after {
 				content: "";
-				@apply w-full absolute left-0 bg-indigo-500;
+				@apply w-full absolute left-0 bg-indigo-500 rounded-t rounded-b-none;
 				height: 3px;
-				border-radius: 3px 3px 0 0;
 				bottom: 1px;
 			}
 		}
