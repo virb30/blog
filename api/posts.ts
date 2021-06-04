@@ -1,8 +1,8 @@
 import GhostContentAPI from '@tryghost/content-api';
 
 const api = new GhostContentAPI({
-	url: 'https://blog.viniboscoa.dev',
-	key: 'a2d5da77d48c913e371f1f1805',
+	url: process.env.GHOST_URL || 'https://blog.viniboscoa.dev',
+	key: process.env.GHOST_KEY || '',
 	version: 'v3',
 });
 
