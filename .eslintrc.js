@@ -26,5 +26,6 @@ module.exports = {
 		'vue/html-indent': ['error', 'tab'],
 		'vue/order-in-components': 'off',
 		'vue/html-self-closing': 'off',
+		camelcase: 'off',
 	},
 };
