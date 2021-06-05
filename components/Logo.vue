@@ -98,7 +98,7 @@ export default Vue.extend({
 		cssProps () {
 			return {
 				'--primary': this.$colorMode.preference === 'light' ? '#4F46E5' : '#A5B4FC',
-				'--secondary': this.$colorMode.preference === 'light' ? '#111827' : '#D1D5DB',
+				'--secondary': this.$colorMode.preference === 'light' ? '#6B7280' : '#D1D5DB',
 			};
 		},
 	},
