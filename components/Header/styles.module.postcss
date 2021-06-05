@@ -3,7 +3,11 @@
 }
 
 .headerContent {
-	@apply max-w-6xl h-20 my-0 mx-auto p-8 flex items-center justify-between;
+	@apply max-w-7xl h-20 my-0 mx-auto p-8 flex items-center justify-between;
+
+	& img {
+		@apply max-w-xs hidden sm:block md:block lg:block xl:block;
+	}
 
 	& nav {
 		@apply ml-20 h-20;

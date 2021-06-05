@@ -13,7 +13,7 @@ export default {
 		link: [
 			{ rel: 'preconnect', href: 'https://fonts.gstatic.com' },
 			{ href: 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap', rel: 'stylesheet' },
-			{ rel: 'icon', type: 'image/png', href: '/profile.png' },
+			{ rel: 'icon', type: 'image/png', href: '/favicon.png' },
 		],
 	},
 
