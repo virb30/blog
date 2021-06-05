@@ -1,5 +1,5 @@
 .content {
-	@apply m-auto max-w-6xl;
+	@apply m-auto max-w-6xl p-4;
 
 	& header {
 		@apply mt-12 mb-8;
@@ -12,8 +12,8 @@
 			@apply font-light text-xl;
 		}
 	}
-}
 
-.postsContainer {
-	@apply grid grid-cols-1 gap-6 lg:grid-cols-3 flex-col lg:flex-row w-full flex-wrap;
+	& .postsContainer {
+		@apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 flex-col sm:flex-row lg:flex-row w-full flex-wrap;
+	}
 }
