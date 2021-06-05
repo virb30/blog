@@ -1,4 +1,6 @@
-# blog
+# Personal Blog
+
+Personal blog developed with Vue, Nuxt & Ghost CMS as Headless CMS.
 
 ## Build Setup
 
@@ -16,5 +18,3 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
