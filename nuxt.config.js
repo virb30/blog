@@ -9,6 +9,7 @@ export default {
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ hid: 'description', name: 'description', content: '' },
+			{ hid: 'theme-color', name: 'theme-color', content: '#E5E7EB' },
 		],
 		link: [
 			{ rel: 'preconnect', href: 'https://fonts.gstatic.com' },

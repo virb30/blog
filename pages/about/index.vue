@@ -8,16 +8,15 @@
 
 		<section>
 			<div :class="$style.textBox">
-				<h1>Sobre</h1>
+				<h1>Sobre mim</h1>
 				<p>
-					Engenheiro de Computação, especialista em segurança da informação e apaixonado por tecnologia com mais de 7 anos de experiência como desenvolvendor de sistemas.
+					Engenheiro de Computação, especialista em segurança da informação com mais de <strong>7 anos</strong> de experiência como desenvolvedor de sistemas.
 				</p>
 				<p>
-					Em busca de se tornar um profissional completo, seu perfil é generalista, capaz de navegar entre backend e frontend com facilidade. Domina o PHP, Laravel e Vue.js.
-					Conhece suficientemente bem Python e Django e recentemente se aventura no mundo do Data Science.
+					Apaixonado por tecnologia, desafios e resolver problemas. Estou sempre buscando me aprimorar e desenvolver tanto pessoal quanto profissionalmente.
 				</p>
 				<p>
-					Gosta de desafios e resolver problemas dos mais variados tipos e sempre aprender algo novo.
+					Minhas áreas de interesse incluem - mas não estão limitadas a - Desenvolvimento Web (Full-stack), Automação de processos, Data Science e Machine Learning.
 				</p>
 			</div>
 
@@ -29,7 +28,7 @@
 				</p>
 				<p>
 					<strong>Front-end:</strong>
-					HTML, CSS, , Vue.js / Nuxt, React / Next, jQuery
+					HTML, CSS, Vue.js / Nuxt, React / Next, jQuery
 				</p>
 				<p>
 					<strong>Banco de dados:</strong>

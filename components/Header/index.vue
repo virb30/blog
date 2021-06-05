@@ -1,7 +1,7 @@
 <template>
 	<header :class="$style.headerContainer">
 		<div :class="$style.headerContent">
-			<img src="~/assets/images/logo.png" alt="viniboscoa" />
+			<Logo />
 			<nav>
 				<NuxtLink exact to="/" :active-class="$style.active" class="hover:text-black dark-hover:text-white">
 					Home

@@ -1,6 +1,6 @@
-# Personal Blog
+# My Personal Blog
 
-Personal blog developed with Vue, Nuxt & Ghost CMS as Headless CMS.
+Personal blog developed with Vue, Nuxt & Ghost as Headless CMS
 
 ## Build Setup
 
