@@ -14,3 +14,27 @@
 		@apply block font-thin mb-4 text-lg mt-2 text-center;
 	}
 }
+
+.lastPosts {
+	@apply mx-auto max-w-6xl;
+
+	& h1 {
+		@apply my-4 font-bold text-xl;
+	}
+
+	& .articles {
+		@apply grid grid-cols-1 gap-6 lg:grid-cols-3 flex-col lg:flex-row w-full flex-wrap;
+	}
+
+	& .moreArticles {
+		@apply text-right font-light my-4;
+
+		& a {
+			@apply hover:font-bold flex items-center justify-end;
+
+			& svg {
+				@apply ml-2;
+			}
+		}
+	}
+}

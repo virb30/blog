@@ -15,7 +15,7 @@
 					Blog
 				</NuxtLink>
 			</nav>
-			<SwitchButton v-model="lightMode" />
+			<SwitchMode />
 		</div>
 	</header>
 </template>
@@ -24,21 +24,6 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-	data () {
-		return {
-			lightMode: false,
-		};
-	},
-	watch: {
-		lightMode (newValue, oldValue) {
-			if (newValue !== oldValue) {
-				this.$colorMode.preference = newValue ? 'light' : 'dark';
-			}
-		},
-	},
-	mounted () {
-		this.lightMode = this.$colorMode.preference !== 'dark';
-	},
 });
 </script>
 

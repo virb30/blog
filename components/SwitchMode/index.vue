@@ -2,10 +2,10 @@
 	<button
 		type="button"
 		class="bg-transparent border-none text-indigo-500 dark:text-indigo-400 text-3xl"
-		:aria-checked="value.toString()"
+		:aria-checked="darkMode.toString()"
 		@click="handleClick"
 	>
-		<FontAwesomeIcon :icon="value? ['fas', 'lightbulb']: ['far', 'lightbulb']" />
+		<FontAwesomeIcon :icon="!darkMode? ['fas', 'lightbulb']: ['far', 'lightbulb']" />
 	</button>
 </template>
 
@@ -22,15 +22,14 @@ export default Vue.extend({
 	components: {
 		FontAwesomeIcon,
 	},
-	props: {
-		value: {
-			type: Boolean,
-			default: false,
+	computed: {
+		darkMode () {
+			return this.$colorMode.preference === 'dark';
 		},
 	},
 	methods: {
 		handleClick () {
-			this.$emit('input', !this.value);
+			this.$colorMode.preference = this.darkMode ? 'light' : 'dark';
 		},
 	},
 });

@@ -47,6 +47,7 @@ export default Vue.extend<Data, unknown, Computed, []>({
 			});
 		},
 	},
+	fetchOnServer: true,
 	async asyncData ({ params }) {
 		const post = await getPostBySlug(params.slug);
 		return { post };
