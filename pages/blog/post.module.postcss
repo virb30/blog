@@ -45,6 +45,10 @@
 			}
 		}
 
+		& code {
+			@apply bg-gray-300 text-gray-600 text-base;
+		}
+
 		& pre {
 			@apply bg-gray-300 text-gray-600 p-3 my-6 mx-0 text-base;
 
@@ -66,9 +70,17 @@
 		& ul,
 		& ol {
 			@apply pl-6;
+		}
 
+		& ul {
 			& li {
-				@apply my-2 mx-0;
+				@apply my-2 mx-2 list-disc;
+			}
+		}
+
+		& ol {
+			& li {
+				@apply my-2 mx-2 list-decimal;
 			}
 		}
 
