@@ -4,7 +4,7 @@
 			<Profile />
 		</div>
 		<div :class="$style.lastPosts">
-			<h1>Últimos artigos</h1>
+			<h2>Últimos artigos</h2>
 			<div :class="$style.articles">
 				<Article v-for="post in posts" :key="post.uuid" :post="post" />
 			</div>

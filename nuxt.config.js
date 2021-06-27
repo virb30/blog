@@ -8,7 +8,7 @@ export default {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: '' },
+			{ hid: 'description', name: 'description', content: 'Desenvolvimento Web, Segurança da Informação e Data Science' },
 			{ hid: 'theme-color', name: 'theme-color', content: '#E5E7EB' },
 		],
 		link: [
@@ -37,10 +37,12 @@ export default {
 		'@nuxtjs/color-mode',
 		// https://go.nuxtjs.dev/tailwindcss
 		'@nuxtjs/tailwindcss',
+		'@nuxtjs/google-analytics',
 	],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [
+		'@nuxtjs/sitemap',
 	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
@@ -53,5 +55,14 @@ export default {
 
 	colorMode: {
 		classSuffix: '',
+	},
+
+	googleAnalytics: {
+		id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
+	},
+	publicRuntimeConfig: {
+		googleAnalytics: {
+			id: process.env.GOOGLE_ANALYTICS_ID,
+		},
 	},
 };

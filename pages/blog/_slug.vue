@@ -36,6 +36,13 @@ export default Vue.extend<Data, unknown, Computed, []>({
 	head () {
 		return {
 			title: `${this.post.title} | viniboscoa.dev`,
+			meta: [
+				{
+					hid: 'og:title',
+					property: 'og:tile',
+					content: this.post.title,
+				},
+			],
 		};
 	},
 	computed: {

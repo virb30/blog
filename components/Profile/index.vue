@@ -1,17 +1,14 @@
 <template>
 	<div :class="$style.container">
 		<img src="~/assets/images/profile.jpg" alt="avatar" />
-		<h1>Vinícius Bôscoa</h1>
-		<span> Eu crio softwares que ajudam a potencializar seus resultados</span>
+		<strong>Vinícius Bôscoa</strong>
+		<span> Desenvolvimento Web, Segurança da Informação e Data Science</span>
 		<div :class="$style.socialContainer">
 			<a href="https://www.linkedin.com/in/vinicius-boscoa">
 				<FontAwesomeIcon :icon="['fab', 'linkedin-in']" />
 			</a>
 			<a href="https://www.github.com/virb30">
 				<FontAwesomeIcon :icon="['fab', 'github']" />
-			</a>
-			<a href="mailto:vinicius.boscoa@gmail.com">
-				<FontAwesomeIcon :icon="['fas', 'envelope']" />
 			</a>
 		</div>
 	</div>
