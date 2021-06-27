@@ -25,7 +25,9 @@ export default {
 	],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-	plugins: [],
+	plugins: [
+		'@/plugins/gtag.ts',
+	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
 	components: true,
@@ -37,7 +39,6 @@ export default {
 		'@nuxtjs/color-mode',
 		// https://go.nuxtjs.dev/tailwindcss
 		'@nuxtjs/tailwindcss',
-		'@nuxtjs/google-analytics',
 	],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
