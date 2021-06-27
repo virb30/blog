@@ -1,7 +1,7 @@
 <template>
 	<div :class="$style.container">
 		<img src="~/assets/images/profile.jpg" alt="avatar" />
-		<strong>Vinícius Bôscoa</strong>
+		<h1>Vinícius Bôscoa</h1>
 		<span> Desenvolvimento Web, Segurança da Informação e Data Science</span>
 		<div :class="$style.socialContainer">
 			<a href="https://www.linkedin.com/in/vinicius-boscoa">

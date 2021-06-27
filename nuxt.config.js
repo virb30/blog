@@ -1,14 +1,14 @@
 export default {
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		title: 'blog',
+		title: 'viniboscoa.dev',
 		htmlAttrs: {
-			lang: 'en',
+			lang: 'pt-BR',
 		},
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: 'Desenvolvimento Web, Segurança da Informação e Data Science' },
+			{ hid: 'description', name: 'description', content: 'Site pessoal e blog para registrar impressões, aprendizados e insights sobre Desenvolvimento Web, Segurança da Informação e Data ScienceSite pessoal e blog com conteúdos sobre Desenvolvimento Web, Segurança da Informação e Data Science' },
 			{ hid: 'theme-color', name: 'theme-color', content: '#E5E7EB' },
 		],
 		link: [
