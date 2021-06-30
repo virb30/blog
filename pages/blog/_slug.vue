@@ -63,3 +63,4 @@ export default Vue.extend<Data, unknown, Computed, []>({
 </script>
 
 <style module src="./post.module.postcss" lang="postcss"></style>
+<style src="./post.postcss" lang="postcss"></style>
