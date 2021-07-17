@@ -1,5 +1,5 @@
 article {
-	@apply hover:opacity-80  rounded-lg h-80;
+	@apply hover:opacity-80 rounded-lg h-96 relative;
 
 	& img {
 		@apply h-48 mx-auto rounded-t-lg w-full;
@@ -11,5 +11,9 @@ article {
 		& h3 {
 			@apply font-bold text-lg;
 		}
+	}
+
+	& footer {
+		@apply px-4 absolute bottom-4;
 	}
 }

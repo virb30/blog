@@ -8,6 +8,7 @@
 			<div :class="$style.postsContainer">
 				<Article v-for="post in posts" :key="post.uuid" :post="post" />
 			</div>
+			<Pagination />
 		</main>
 	</div>
 </template>
@@ -21,7 +22,7 @@ export default Vue.extend({
 		title: 'Blog | viniboscoa.dev',
 	},
 	computed: {
-		...mapState('Blog', ['posts']),
+		...mapState('Blog', ['posts', 'pagination']),
 	},
 });
 </script>

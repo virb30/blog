@@ -10,15 +10,18 @@ export async function getPosts (params?: Params): Promise<PostsOrPages> {
 	const limit = params?.limit ?? 'all';
 
 	return await api.posts.browse({
+		...params,
+		include: ['tags', 'authors'],
 		limit,
 	});
 }
 
 export async function getPostBySlug (slug: string) {
-	return await api.posts
-		.read({
-			slug,
-		})
+	return await api.posts.read({
+		slug,
+	}, {
+		include: ['tags', 'authors'],
+	})
 		.catch((err) => {
 			console.error(err);
 		});

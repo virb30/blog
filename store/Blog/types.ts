@@ -1,3 +1,4 @@
+import { Pagination } from '@tryghost/content-api';
 import { MutationTree, ActionContext, ActionTree } from 'vuex';
 
 export interface Post {
@@ -10,6 +11,7 @@ export interface Post {
 
 export interface State {
 	posts: Post[];
+	pagination: Pagination;
 }
 
 export interface Getters {
@@ -17,7 +19,8 @@ export interface Getters {
 }
 
 export enum Mutations {
-	SET_POSTS = 'SET_POSTS'
+	SET_POSTS = 'SET_POSTS',
+	SET_PAGINATION = 'SET_PAGINATION'
 }
 
 export type RootState = ReturnType<() => State>
@@ -31,5 +34,5 @@ export enum Actions {
 }
 
 export interface ActionsInterface extends ActionTree<RootState, RootState> {
-	fetchPosts(actionContext: ActionContext<RootState, RootState>): Promise<void>
+	fetchPosts(actionContext: ActionContext<RootState, RootState>, page: number): Promise<void>
 }

@@ -6,17 +6,25 @@
 				<h3>{{ post.title }}</h3>
 			</div>
 		</NuxtLink>
+		<footer>
+			{{ tags }}
+		</footer>
 	</article>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 
+interface Tag {
+	name: string;
+}
+
 interface Post {
 	uuid: string;
 	slug: string;
 	title: string;
 	feature_image: string;
+	tags: Tag[]
 }
 
 interface Props {
@@ -28,6 +36,11 @@ export default Vue.extend<unknown, unknown, unknown, Props>({
 		post: {
 			type: Object,
 			required: true,
+		},
+	},
+	computed: {
+		tags () {
+			return this.post?.tags.map(tag => tag.name).join(', ');
 		},
 	},
 });

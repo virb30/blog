@@ -2,10 +2,12 @@
 	<main :class="$style.content">
 		<article :class="$style.post">
 			<h1>{{ post.title }}</h1>
-			<div :class="$style.postMeta">
-				<time>{{ updatedAt }}</time>
+			<div :class="$style.postMeta" class="text-gray-500 dark:text-gray-400">
+				<span class="mr-2">por  {{ post.primary_author.name }}</span>
 				|
-				<span>{{ post.reading_time }} min de leitura</span>
+				<time class="mx-2">{{ updatedAt }}</time>
+				|
+				<span class="ml-2">{{ post.reading_time }} min de leitura</span>
 			</div>
 			<div
 				:class="$style.postContent"
