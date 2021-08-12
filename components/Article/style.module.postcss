@@ -1,17 +1,16 @@
 a {
 	& article {
-		height: 36rem;
-		@apply hover:opacity-80 rounded-lg flex flex-col;
+		@apply hover:opacity-80 rounded-lg;
 
 		& header {
-			@apply max-h-80 mb-3;
+			@apply h-80 mb-3;
 
 			& img {
-				@apply h-48 mx-auto mb-3 rounded-t-lg w-full;
+				@apply h-48 mx-auto rounded-t-lg w-full;
 			}
 
 			& h3 {
-				@apply font-bold text-lg px-4 block overflow-ellipsis overflow-hidden;
+				@apply mt-6 font-bold text-lg px-4 block overflow-ellipsis overflow-hidden;
 				display: -webkit-box;
 				-webkit-line-clamp: 4;
 				-webkit-box-orient: vertical;
@@ -23,7 +22,7 @@ a {
 		}
 
 		& section {
-			@apply px-4 mt-1 flex-1 max-h-96;
+			@apply px-4 mt-1 h-52;
 
 			& p {
 				@apply text-base overflow-ellipsis overflow-hidden text-justify;
