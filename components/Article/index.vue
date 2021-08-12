@@ -1,15 +1,18 @@
 <template>
-	<article class="bg-gray-300 dark:bg-gray-600">
-		<NuxtLink :to="{path: `/blog/${post.slug}` }">
-			<img :src="post.feature_image" :alt="post.slug" />
-			<div>
+	<NuxtLink :to="{path: `/blog/${post.slug}` }">
+		<article class="bg-gray-300 dark:bg-gray-600">
+			<header>
+				<img :src="post.feature_image" :alt="post.slug" />
 				<h3>{{ post.title }}</h3>
-			</div>
-		</NuxtLink>
-		<footer>
-			{{ tags }}
-		</footer>
-	</article>
+				<h5>por {{ post.primary_author.name }} </h5>
+			</header>
+			<section>
+				<p>
+					{{ post.excerpt }}
+				</p>
+			</section>
+		</article>
+	</NuxtLink>
 </template>
 
 <script lang="ts">
@@ -24,11 +27,12 @@ interface Post {
 	slug: string;
 	title: string;
 	feature_image: string;
-	tags: Tag[]
+	tags: Tag[],
+	updated_at: Date;
 }
 
 interface Props {
-	post?: Post
+	post: Post
 }
 
 export default Vue.extend<unknown, unknown, unknown, Props>({
@@ -36,11 +40,6 @@ export default Vue.extend<unknown, unknown, unknown, Props>({
 		post: {
 			type: Object,
 			required: true,
-		},
-	},
-	computed: {
-		tags () {
-			return this.post?.tags.map(tag => tag.name).join(', ');
 		},
 	},
 });

@@ -27,6 +27,9 @@ interface Data {
 		html: string;
 		slug: string;
 		updated_at: string;
+		feature_image?: string;
+		canonical_url?: string;
+		og_description?: string;
 	}
 }
 
@@ -41,8 +44,28 @@ export default Vue.extend<Data, unknown, Computed, []>({
 			meta: [
 				{
 					hid: 'og:title',
-					property: 'og:tile',
+					property: 'og:title',
 					content: this.post.title,
+				},
+				{
+					hid: 'og:type',
+					property: 'og:type',
+					content: 'article',
+				},
+				{
+					hid: 'og:image',
+					property: 'og:image',
+					content: this.post.feature_image ?? '',
+				},
+				{
+					hid: 'og:url',
+					property: 'og:url',
+					content: this.post.canonical_url ?? '',
+				},
+				{
+					hid: 'og:description',
+					property: 'og:description',
+					content: this.post.og_description ?? '',
 				},
 			],
 		};

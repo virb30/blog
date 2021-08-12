@@ -1,19 +1,36 @@
-article {
-	@apply hover:opacity-80 rounded-lg h-96 relative;
+a {
+	& article {
+		height: 36rem;
+		@apply hover:opacity-80 rounded-lg flex flex-col;
 
-	& img {
-		@apply h-48 mx-auto rounded-t-lg w-full;
-	}
+		& header {
+			@apply max-h-80 mb-3;
 
-	& div {
-		@apply p-4 mt-1;
+			& img {
+				@apply h-48 mx-auto mb-3 rounded-t-lg w-full;
+			}
 
-		& h3 {
-			@apply font-bold text-lg;
+			& h3 {
+				@apply font-bold text-lg px-4 block overflow-ellipsis overflow-hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 4;
+				-webkit-box-orient: vertical;
+			}
+
+			& h5 {
+				@apply px-4 text-sm opacity-80 mt-2;
+			}
 		}
-	}
 
-	& footer {
-		@apply px-4 absolute bottom-4;
+		& section {
+			@apply px-4 mt-1 flex-1 max-h-96;
+
+			& p {
+				@apply text-base overflow-ellipsis overflow-hidden text-justify;
+				display: -webkit-box;
+				-webkit-line-clamp: 9;
+				-webkit-box-orient: vertical;
+			}
+		}
 	}
 }
