@@ -29,7 +29,7 @@ interface Data {
 		updated_at: string;
 		feature_image?: string;
 		canonical_url?: string;
-		og_description?: string;
+		meta_description?: string;
 	}
 }
 
@@ -65,7 +65,12 @@ export default Vue.extend<Data, unknown, Computed, []>({
 				{
 					hid: 'og:description',
 					property: 'og:description',
-					content: this.post.og_description ?? '',
+					content: this.post.title ?? '',
+				},
+				{
+					hid: 'description',
+					property: 'description',
+					content: this.post.meta_description ?? '',
 				},
 			],
 		};
