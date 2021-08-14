@@ -65,7 +65,7 @@ export default Vue.extend<Data, unknown, Computed, []>({
 				{
 					hid: 'og:description',
 					property: 'og:description',
-					content: this.post.title ?? '',
+					content: this.post.meta_description ?? '',
 				},
 				{
 					hid: 'description',
