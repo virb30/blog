@@ -14,6 +14,8 @@ export interface State {
 	pagination: Pagination;
 }
 
+export type RootState = ReturnType<() => State>
+
 export interface Getters {
 	last3Posts: (state: State) => Post[];
 }
@@ -23,10 +25,9 @@ export enum Mutations {
 	SET_PAGINATION = 'SET_PAGINATION'
 }
 
-export type RootState = ReturnType<() => State>
-
 export interface MutationsInterface extends MutationTree<RootState> {
 	[Mutations.SET_POSTS](s:State, p: Post[]): void;
+	[Mutations.SET_PAGINATION](s:State, p: Pagination): void;
 }
 
 export enum Actions {

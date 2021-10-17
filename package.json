@@ -25,7 +25,8 @@
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
     "tailwindcss-dark-mode": "^1.1.7",
-    "vue-gtag": "^1.16.1"
+    "vue-gtag": "^1.16.1",
+    "vue-meta": "^2.4.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",
@@ -44,6 +45,8 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.7.0",
     "jest": "^27.0.3",
+    "jsdom": "^18.0.0",
+    "jsdom-global": "^3.0.2",
     "postcss": "^8.3.0",
     "postcss-nesting": "^8.0.1",
     "tailwindcss": "^2.1.2",
