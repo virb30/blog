@@ -12,18 +12,25 @@
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 flex-col sm:flex-row lg:flex-row w-full flex-wrap">
 				<Article v-for="post in posts" :key="post.uuid" :post="post" />
 			</div>
-			<Pagination />
+			<Pagination :pagination="pagination" @change="(page) => fetchPosts(page)" />
 		</main>
 	</div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
-export default Vue.extend({
+interface Methods {
+	fetchPosts(page: number): void;
+}
+
+export default Vue.extend<unknown, Methods, unknown, unknown>({
 	head: {
 		title: 'Blog | viniboscoa.dev',
+	},
+	methods: {
+		...mapActions('Blog', ['fetchPosts']),
 	},
 	computed: {
 		...mapState('Blog', ['posts', 'pagination']),

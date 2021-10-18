@@ -31,7 +31,7 @@ import Vue from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { mapActions, mapState } from 'vuex';
+import { mapActions } from 'vuex';
 import { Pagination } from '@tryghost/content-api';
 import PageButton from './PageButton.vue';
 
@@ -40,18 +40,20 @@ library.add(faChevronLeft, faChevronRight);
 interface Methods {
 	prevPage(): void
 	toPage(page: number): void
-	nextPage(): void
-	fetchPosts(page: number): void
+	nextPage(): void;
 }
 
-interface Computed {
+interface Props {
 	pagination: Pagination,
 }
 
-export default Vue.extend<unknown, Methods, Computed, unknown>({
+export default Vue.extend<unknown, Methods, unknown, Props>({
 	components: { FontAwesomeIcon, PageButton },
-	computed: {
-		...mapState('Blog', ['pagination']),
+	props: {
+		pagination: {
+			type: Object,
+			required: true,
+		},
 	},
 	methods: {
 		...mapActions('Blog', ['fetchPosts']),
@@ -66,7 +68,7 @@ export default Vue.extend<unknown, Methods, Computed, unknown>({
 			}
 		},
 		toPage (page: number) {
-			this.fetchPosts(page);
+			this.$emit('change-page', page);
 		},
 	},
 });
