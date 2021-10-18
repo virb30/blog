@@ -1,0 +1,13 @@
+.clamp-text {
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+
+.clamp-lines-sm {
+	-webkit-line-clamp: 4;
+}
+
+.clamp-lines-lg {
+	-webkit-line-clamp: 9;
+}

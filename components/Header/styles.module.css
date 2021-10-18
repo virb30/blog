@@ -1,0 +1,18 @@
+.leading-20 {
+	line-height: 5rem;
+}
+
+.transition-color-2 {
+	transition: color 0.2s;
+}
+
+nav > a:hover,
+nav > a.active {
+	@apply font-bold;
+}
+
+.active::after {
+	content: "";
+	@apply w-full absolute left-0 bg-indigo-500 rounded-t rounded-b-none h-1;
+	bottom: 1px;
+}
