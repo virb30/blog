@@ -1,16 +1,18 @@
 <template>
-	<main :class="$style.content">
-		<article :class="$style.post">
-			<h1>{{ post.title }}</h1>
-			<div :class="$style.postMeta" class="text-gray-500 dark:text-gray-400">
-				<span class="mr-2">por  {{ post.primary_author.name }}</span>
+	<main class="mx-auto max-w-6xl py-8">
+		<article class="max-w-4xl mt-20 mx-auto mb-0 px-4">
+			<h1 class="font-black text-5xl">
+				{{ post.title }}
+			</h1>
+			<div class="text-gray-500 dark:text-gray-400 flex mt-6 items-center">
+				<span class="mr-2 block">por  {{ post.primary_author.name }}</span>
 				|
-				<time class="mx-2">{{ updatedAt }}</time>
+				<time class="mx-2 block text-base">{{ updatedAt }}</time>
 				|
-				<span class="ml-2">{{ post.reading_time }} min de leitura</span>
+				<span class="ml-2 block">{{ post.reading_time }} min de leitura</span>
 			</div>
 			<div
-				:class="$style.postContent"
+				class="postContent"
 				v-html="post.html"
 			/>
 		</article>
@@ -92,5 +94,4 @@ export default Vue.extend<Data, unknown, Computed, []>({
 });
 </script>
 
-<style module src="./post.module.postcss" lang="postcss"></style>
-<style src="./post.postcss" lang="postcss"></style>
+<style src="./post.css"></style>
