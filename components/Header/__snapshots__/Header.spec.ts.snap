@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should render childs 1`] = `
+"<header class=\\"h-20 border-0 border-b border-solid border-gray-400 dark:border-gray-100\\">
+  <div class=\\"max-w-7xl h-20 my-0 mx-auto p-8 flex items-center justify-between\\">
+    <logo-stub class=\\"max-w-xs hidden md:block lg:block xl:block\\"></logo-stub>
+    <nav class=\\"ml-20 h-20\\"><a class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-2 h-20 leading-20 transition-color-2\\">
+        Home
+      </a> <a class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-2 h-20 leading-20 transition-color-2\\">
+        Sobre
+      </a> <a class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-2 h-20 leading-20 transition-color-2\\">
+        Blog
+      </a></nav>
+    <div class=\\"ml-auto\\">
+      <switchmode-stub></switchmode-stub>
+    </div>
+  </div>
+</header>"
+`;
