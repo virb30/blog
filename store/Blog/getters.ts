@@ -1,7 +1,10 @@
-import { Getters } from './types';
+import { RootState, State } from './types';
+import { GetterTree } from 'vuex';
 
-export default {
-	last3Posts (state) {
+const getters: GetterTree<RootState, State> = {
+	last3Posts: (state) => {
 		return state.posts.slice(0, 3);
 	},
-} as Getters;
+};
+
+export default getters;

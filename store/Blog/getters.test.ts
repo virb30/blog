@@ -26,7 +26,7 @@ describe('Store:Blog:getters', () => {
 	});
 
 	it('last3Posts', () => {
-		const lastPosts = getters.last3Posts(state);
+		const lastPosts = getters.last3Posts(state, {}, state, {});
 
 		const expected = [
 			{ uuid: 'post-1' },

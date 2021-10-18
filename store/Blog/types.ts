@@ -1,5 +1,5 @@
 import { Pagination } from '@tryghost/content-api';
-import { MutationTree, ActionContext, ActionTree } from 'vuex';
+import { MutationTree, ActionContext, ActionTree, GetterTree } from 'vuex';
 
 export interface Post {
 	uuid?: string;
@@ -16,7 +16,7 @@ export interface State {
 
 export type RootState = ReturnType<() => State>
 
-export interface Getters {
+export interface Getters extends GetterTree<RootState, State> {
 	last3Posts: (state: State) => Post[];
 }
 
