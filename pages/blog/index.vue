@@ -1,11 +1,15 @@
 <template>
 	<div>
-		<main :class="$style.content">
-			<header>
-				<h1>Blog</h1>
-				<p>Conteúdo sobre o Desenvolvimento Web e Data Science</p>
+		<main class="m-auto max-w-6xl p-4">
+			<header class="mt-12 mb-8">
+				<h1 class="font-bold text-2xl mb-3">
+					Blog
+				</h1>
+				<p class="font-light text-xl">
+					Conteúdo sobre o Desenvolvimento Web e Data Science
+				</p>
 			</header>
-			<div :class="$style.postsContainer">
+			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 flex-col sm:flex-row lg:flex-row w-full flex-wrap">
 				<Article v-for="post in posts" :key="post.uuid" :post="post" />
 			</div>
 			<Pagination />
@@ -26,5 +30,3 @@ export default Vue.extend({
 	},
 });
 </script>
-
-<style lang="postcss" module scoped src="./style.module.postcss"></style>
