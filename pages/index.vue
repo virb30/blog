@@ -1,14 +1,16 @@
 <template>
 	<main>
-		<div :class="$style.container">
+		<div class="container w-full bg-cover bg-fixed bg-center flex items-center justify-center flex-col py-16 px-8 text-white">
 			<Profile />
 		</div>
-		<div :class="$style.lastPosts">
-			<h2>Últimos artigos</h2>
-			<div :class="$style.articles">
+		<div class="mx-auto max-w-6xl p-4">
+			<h2 class="my-4 font-bold text-xl">
+				Últimos artigos
+			</h2>
+			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 flex-col sm:flex-row lg:flex-row w-full flex-wrap">
 				<Article v-for="post in posts" :key="post.uuid" :post="post" />
 			</div>
-			<div :class="$style.moreArticles">
+			<div class="text-right font-light my-4">
 				<NuxtLink to="/blog">
 					Ver todos os artigos
 					<FontAwesomeIcon :icon="['fas', 'chevron-right']" />
@@ -50,4 +52,4 @@ export default Vue.extend<Data, unknown, unknown, []>({
 });
 </script>
 
-<style lang="postcss" scoped module src="./style.module.postcss"></style>
+<style scoped src="./style.module.css"></style>
