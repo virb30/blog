@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Component should render post card 1`] = `
+"<nuxtlink-stub to=\\"[object Object]\\">
+  <article class=\\"bg-gray-300 dark:bg-gray-600 hover:opacity-80 rounded-lg\\">
+    <header class=\\"h-80 mb-3\\"><img src=\\"\\" alt=\\"post-slug\\" class=\\"h-48 mx-auto rounded-t-lg w-full\\">
+      <h3 class=\\"mt-6 font-bold text-lg px-4 block overflow-ellipsis overflow-hidden\\">
+        Post Title
+      </h3>
+      <h5 class=\\"px-4 text-sm opacity-80 mt-2\\">
+        por John Doe
+      </h5>
+    </header>
+    <section class=\\"px-4 mt-1 h-52\\">
+      <p class=\\"text-base overflow-ellipsis overflow-hidden text-justify\\">
+
+      </p>
+    </section>
+  </article>
+</nuxtlink-stub>"
+`;

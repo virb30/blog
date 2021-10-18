@@ -36,6 +36,9 @@ interface Post {
 	feature_image: string;
 	tags: Tag[],
 	updated_at: Date;
+	primary_author: {
+		name: string;
+	}
 }
 
 interface Props {
