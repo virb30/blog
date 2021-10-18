@@ -36,7 +36,7 @@ describe('Pagination Component', () => {
 			},
 		});
 
-		const toPage = jest.spyOn<Pagination, any>(wrapper.vm, 'toPage');
+		const toPage = jest.spyOn<typeof Pagination, any>(wrapper.vm, 'toPage');
 
 		const pageButton = wrapper.findAllComponents(PageButton);
 
@@ -57,7 +57,7 @@ describe('Pagination Component', () => {
 			},
 		});
 
-		const toPage = jest.spyOn<Pagination, any>(wrapper.vm, 'toPage');
+		const toPage = jest.spyOn<typeof Pagination, any>(wrapper.vm, 'toPage');
 
 		const pageButton = wrapper.findAllComponents(PageButton);
 
@@ -78,7 +78,7 @@ describe('Pagination Component', () => {
 			},
 		});
 
-		const toPage = jest.spyOn<Pagination, any>(wrapper.vm, 'toPage');
+		const toPage = jest.spyOn<typeof Pagination, any>(wrapper.vm, 'toPage');
 
 		const pageButton = wrapper.findAllComponents(PageButton);
 
