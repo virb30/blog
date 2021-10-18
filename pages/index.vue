@@ -43,8 +43,8 @@ export default Vue.extend<Data, unknown, unknown, []>({
 		title: 'Home | viniboscoa.dev',
 	},
 	computed: {
-		...mapGetters({
-			posts: 'Blog/last3Posts',
+		...mapGetters('Blog', {
+			posts: 'last3Posts',
 		}),
 	},
 });
