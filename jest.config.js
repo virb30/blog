@@ -10,6 +10,8 @@ module.exports = {
 		'vue',
 		'json',
 	],
+	testEnvironment: 'jsdom',
+	preset: '@nuxt/test-utils',
 	transform: {
 		'^.+\\.ts$': 'ts-jest',
 		'^.+\\.js$': 'babel-jest',

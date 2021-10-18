@@ -27,5 +27,6 @@ module.exports = {
 		'vue/order-in-components': 'off',
 		'vue/html-self-closing': 'off',
 		camelcase: 'off',
+		'vue/script-setup-uses-vars': 'off',
 	},
 };

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2018",
-    "module": "ESNext",
+    "module": "ES2020",
     "moduleResolution": "Node",
     "lib": [
       "ESNext",
@@ -27,7 +27,8 @@
       "@nuxt/types",
       "@types/node",
 			"@types/jest",
-			"@nuxtjs/color-mode"
+			"@nuxtjs/color-mode",
+			"@nuxt/vue-app"
     ]
   },
   "exclude": [
