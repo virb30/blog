@@ -1,13 +1,23 @@
 <template>
-	<div :class="$style.container">
-		<img src="~/assets/images/profile.jpg" alt="avatar" />
-		<h1>Vinícius Bôscoa</h1>
-		<span> Desenvolvimento Web, Segurança da Informação e Data Science</span>
-		<div :class="$style.socialContainer">
-			<a href="https://www.linkedin.com/in/vinicius-boscoa">
+	<div class="w-full flex items-center justify-center flex-col p-2">
+		<img src="~/assets/images/profile.jpg" alt="avatar" class="h-40 w-40 rounded-full mb-8" />
+		<h1 class="mb-4 text-3xl font-bold">
+			Vinícius Bôscoa
+		</h1>
+		<span class="block font-thin mb-4 text-lg mt-2 text-center">
+			Desenvolvimento Web, Segurança da Informação e Data Science
+		</span>
+		<div class="flex mt-6">
+			<a
+				href="https://www.linkedin.com/in/vinicius-boscoa"
+				class="block bg-gray-200 rounded py-2 px-3 text-xl text-gray-800"
+			>
 				<FontAwesomeIcon :icon="['fab', 'linkedin-in']" />
 			</a>
-			<a href="https://www.github.com/virb30">
+			<a
+				href="https://www.github.com/virb30"
+				class="block bg-gray-200 rounded py-2 px-3 text-xl text-gray-800"
+			>
 				<FontAwesomeIcon :icon="['fab', 'github']" />
 			</a>
 		</div>
@@ -31,4 +41,4 @@ export default Vue.extend({
 });
 </script>
 
-<style module lang="postcss" scoped src="./style.module.postcss"></style>
+<style module scoped src="./style.module.css"></style>

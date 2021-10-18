@@ -1,0 +1,7 @@
+a + a {
+	@apply ml-3;
+}
+
+a:hover {
+	@apply bg-indigo-700 text-white;
+}
