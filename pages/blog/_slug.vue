@@ -91,10 +91,6 @@ export default Vue.extend<Data, unknown, Computed, []>({
 		const post = await getPostBySlug(params.slug);
 		return { post };
 	},
-	mounted() {
-		console.log('mounted');
-		console.log(this.post);
-	}
 });
 </script>
 
