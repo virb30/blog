@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default Layout should render childs 1`] = `
+"<div class=\\"w-full dark\\">
+  <header class=\\"h-20 border-0 border-b border-solid border-gray-400 dark:border-gray-100\\">
+    <div class=\\"max-w-7xl h-20 my-0 mx-auto p-8 flex items-center justify-between\\">
+      <logo class=\\"max-w-xs hidden md:block lg:block xl:block\\"></logo>
+      <nav class=\\"ml-20 h-20\\">
+        <nuxtlink exact=\\"\\" to=\\"/\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-2 h-20 leading-20 transition-color-2\\">
+          Home
+        </nuxtlink>
+        <nuxtlink to=\\"/about\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-2 h-20 leading-20 transition-color-2\\">
+          Sobre
+        </nuxtlink>
+        <nuxtlink to=\\"/blog\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-2 h-20 leading-20 transition-color-2\\">
+          Blog
+        </nuxtlink>
+      </nav>
+      <div class=\\"ml-auto\\">
+        <switchmode></switchmode>
+      </div>
+    </div>
+  </header>
+  <nuxt></nuxt>
+</div>"
+`;

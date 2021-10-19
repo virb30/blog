@@ -16,6 +16,7 @@ module.exports = {
 		'^.+\\.js$': 'babel-jest',
 		'.*\\.(vue)$': 'vue-jest',
 	},
+	preset: '@nuxt/test-utils',
 	collectCoverage: false,
 	collectCoverageFrom: [
 		'<rootDir>/components/**/*.vue',
@@ -24,5 +25,6 @@ module.exports = {
 		'<rootDir>/store/**/*.ts',
 		'<rootDir>/utils/**/*.ts',
 		'!<rootDir>/**/types.ts',
+		'!<rootDir>/**/Logo.vue',
 	],
 };
