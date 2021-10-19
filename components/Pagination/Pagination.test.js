@@ -36,11 +36,11 @@ describe('Pagination Component', () => {
 			},
 		});
 
-		const toPage = jest.spyOn<Pagination, any>(wrapper.vm, 'toPage');
+		const toPage = jest.spyOn(wrapper.vm, 'toPage');
 
 		const pageButton = wrapper.findAllComponents(PageButton);
 
-		await pageButton.at(3).trigger('click');
+		await pageButton.at(3).vm.$emit('click');
 		expect(toPage).toHaveBeenCalledWith(2);
 	});
 
@@ -57,11 +57,11 @@ describe('Pagination Component', () => {
 			},
 		});
 
-		const toPage = jest.spyOn<Pagination, any>(wrapper.vm, 'toPage');
+		const toPage = jest.spyOn(wrapper.vm, 'toPage');
 
 		const pageButton = wrapper.findAllComponents(PageButton);
 
-		await pageButton.at(0).trigger('click');
+		await pageButton.at(0).vm.$emit('click');
 		expect(toPage).toHaveBeenCalledWith(1);
 	});
 
@@ -78,11 +78,11 @@ describe('Pagination Component', () => {
 			},
 		});
 
-		const toPage = jest.spyOn<Pagination, any>(wrapper.vm, 'toPage');
+		const toPage = jest.spyOn(wrapper.vm, 'toPage');
 
 		const pageButton = wrapper.findAllComponents(PageButton);
 
-		await pageButton.at(3).trigger('click');
+		await pageButton.at(3).vm.$emit('click');
 		expect(toPage).toHaveBeenCalledWith(3);
 	});
 });

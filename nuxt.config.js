@@ -50,6 +50,8 @@ export default {
 	build: {
 	},
 
+	ignore: ['**/*.test.*'],
+
 	tailwindcss: {
 		viewer: false,
 	},
