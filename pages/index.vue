@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<div class="container w-full bg-cover bg-fixed bg-center flex items-center justify-center flex-col py-16 px-8 text-white">
+		<div class="banner w-full bg-cover bg-fixed bg-center flex items-center justify-center flex-col py-16 px-8 text-white">
 			<Profile />
 		</div>
 		<div class="mx-auto max-w-6xl p-4">
