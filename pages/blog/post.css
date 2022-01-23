@@ -25,7 +25,7 @@
 		@apply mx-auto text-center;
 
 		& img {
-			@apply mx-auto;
+			@apply mx-auto w-full;
 		}
 
 		& a {
