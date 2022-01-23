@@ -1,26 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Default Layout should render childs 1`] = `
+exports[`Default Layout should not render cookies consent term dialog 1`] = `
 "<div class=\\"w-full dark\\">
   <header class=\\"h-20 border-0 border-b border-solid border-gray-400 dark:border-gray-100\\">
-    <div class=\\"max-w-7xl h-20 my-0 mx-auto p-8 flex items-center justify-between\\">
+    <div class=\\"max-w-7xl h-20 my-0 mx-auto p-4 flex items-center justify-between\\">
       <logo class=\\"max-w-xs hidden md:block lg:block xl:block\\"></logo>
-      <nav class=\\"ml-20 h-20\\">
-        <nuxtlink exact=\\"\\" to=\\"/\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-2 h-20 leading-20 transition-color-2\\">
+      <nav class=\\"md:ml-20 h-20\\">
+        <nuxtlink exact=\\"\\" to=\\"/\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\">
           Home
         </nuxtlink>
-        <nuxtlink to=\\"/about\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-2 h-20 leading-20 transition-color-2\\">
+        <nuxtlink to=\\"/about\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\">
           Sobre
         </nuxtlink>
-        <nuxtlink to=\\"/blog\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-2 h-20 leading-20 transition-color-2\\">
+        <nuxtlink to=\\"/blog\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\">
           Blog
         </nuxtlink>
       </nav>
-      <div class=\\"ml-auto\\">
+      <div class=\\"ml-auto p-4\\">
         <switchmode></switchmode>
       </div>
     </div>
   </header>
   <nuxt></nuxt>
+  <!---->
+</div>"
+`;
+
+exports[`Default Layout should render childs 1`] = `
+"<div class=\\"w-full dark\\">
+  <header class=\\"h-20 border-0 border-b border-solid border-gray-400 dark:border-gray-100\\">
+    <div class=\\"max-w-7xl h-20 my-0 mx-auto p-4 flex items-center justify-between\\">
+      <logo class=\\"max-w-xs hidden md:block lg:block xl:block\\"></logo>
+      <nav class=\\"md:ml-20 h-20\\">
+        <nuxtlink exact=\\"\\" to=\\"/\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\">
+          Home
+        </nuxtlink>
+        <nuxtlink to=\\"/about\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\">
+          Sobre
+        </nuxtlink>
+        <nuxtlink to=\\"/blog\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\">
+          Blog
+        </nuxtlink>
+      </nav>
+      <div class=\\"ml-auto p-4\\">
+        <switchmode></switchmode>
+      </div>
+    </div>
+  </header>
+  <nuxt></nuxt>
+  <div id=\\"consent-term-container\\" class=\\"bg-gray-900 text-gray-50 dark:bg-gray-50 dark:text-gray-900 fixed bottom-0 w-full\\">
+    <div class=\\"py-6 px-8 flex items-center justify-center max-w-6xl m-auto\\">
+      <p class=\\"text-sm\\">
+        Nós usamos Google Analytics para realizar análises estatísticas de uso da página e interações para avaliar e desenvolver nosso site. Ao utilizar nossos serviços você concorda com a coleta dessas informações.
+        Para saber mais sobre como o Google utiliza os dados coletados através desse serviço, acesse: <a href=\\"http://www.google.com/policies/privacy/partners/\\" class=\\"underline\\">http://www.google.com/policies/privacy/partners/</a></p> <button type=\\"button\\" class=\\"ml-4 border-2 border-gray-50 rounded px-4 h-8 text-xs text-gray-50 hover:bg-gray-50 hover:text-gray-900 dark:border-gray-900 dark:text-gray-900 dark-hover:bg-gray-900 dark-hover:text-gray-50\\">
+        Aceitar
+      </button>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Default Layout should render cookies consent term dialog 1`] = `
+"<div class=\\"w-full dark\\">
+  <header class=\\"h-20 border-0 border-b border-solid border-gray-400 dark:border-gray-100\\">
+    <div class=\\"max-w-7xl h-20 my-0 mx-auto p-4 flex items-center justify-between\\">
+      <logo class=\\"max-w-xs hidden md:block lg:block xl:block\\"></logo>
+      <nav class=\\"md:ml-20 h-20\\">
+        <nuxtlink exact=\\"\\" to=\\"/\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\">
+          Home
+        </nuxtlink>
+        <nuxtlink to=\\"/about\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\">
+          Sobre
+        </nuxtlink>
+        <nuxtlink to=\\"/blog\\" active-class=\\"active\\" class=\\"hover:text-black dark-hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\">
+          Blog
+        </nuxtlink>
+      </nav>
+      <div class=\\"ml-auto p-4\\">
+        <switchmode></switchmode>
+      </div>
+    </div>
+  </header>
+  <nuxt></nuxt>
+  <div id=\\"consent-term-container\\" class=\\"bg-gray-900 text-gray-50 dark:bg-gray-50 dark:text-gray-900 fixed bottom-0 w-full\\">
+    <div class=\\"py-6 px-8 flex items-center justify-center max-w-6xl m-auto\\">
+      <p class=\\"text-sm\\">
+        Nós usamos Google Analytics para realizar análises estatísticas de uso da página e interações para avaliar e desenvolver nosso site. Ao utilizar nossos serviços você concorda com a coleta dessas informações.
+        Para saber mais sobre como o Google utiliza os dados coletados através desse serviço, acesse: <a href=\\"http://www.google.com/policies/privacy/partners/\\" class=\\"underline\\">http://www.google.com/policies/privacy/partners/</a></p> <button type=\\"button\\" class=\\"ml-4 border-2 border-gray-50 rounded px-4 h-8 text-xs text-gray-50 hover:bg-gray-50 hover:text-gray-900 dark:border-gray-900 dark:text-gray-900 dark-hover:bg-gray-900 dark-hover:text-gray-50\\">
+        Aceitar
+      </button>
+    </div>
+  </div>
 </div>"
 `;
