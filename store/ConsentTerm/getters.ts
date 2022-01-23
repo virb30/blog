@@ -3,7 +3,7 @@ import { GetterTree } from 'vuex';
 
 const getters: GetterTree<RootState, State> = {
 	getPolicyAccepted: (state) => {
-		return !!state.cookiesPolicyAccepted
+		return state.cookiesPolicyAccepted
 	},
 };
 
