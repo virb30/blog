@@ -1,5 +1,5 @@
 <template>
-	<main class="mx-auto max-w-6xl py-8">
+	<main class="mx-auto max-w-6xl py-2">
 		<article class="max-w-4xl mt-20 mx-auto mb-0 px-4">
 			<h1 class="font-black text-5xl">
 				{{ post.title }}

@@ -1,12 +1,6 @@
 .postContent {
 	@apply mt-8 leading-8 text-lg text-justify;
 
-	@media (min-width: 360px) {
-		body {
-			font-size: 1rem;
-		}
-	}
-
 	& h1 {
 		@apply font-extrabold text-4xl my-3;
 	}
