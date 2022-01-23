@@ -2,7 +2,7 @@
 	<div class="w-full" :class="[$colorMode.preference]">
 		<Header />
 		<Nuxt />
-		<CookieConsent v-if="!policyAccepted"/>
+		<CookieConsent v-cloak v-if="!policyAccepted"/>
 	</div>
 </template>
 
@@ -14,7 +14,7 @@ import CookieConsent from '~/components/CookieConsent/index.vue';
 
 export default Vue.extend({
 	components: { Header, CookieConsent },
-	beforeMount () {
+	mounted () {
 		this.fetchFromStorage();
 	},
 	methods: {
