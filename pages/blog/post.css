@@ -1,5 +1,11 @@
 .postContent {
-	@apply mt-8 leading-8 text-lg;
+	@apply mt-8 leading-8 text-lg text-justify;
+
+	@media (min-width: 360px) {
+		body {
+			font-size: 1rem;
+		}
+	}
 
 	& h1 {
 		@apply font-extrabold text-4xl my-3;
@@ -18,7 +24,7 @@
 	}
 
 	& a {
-		@apply underline font-semibold;
+		@apply underline font-semibold break-words max-w-4xl;
 	}
 
 	& figure {
@@ -34,7 +40,7 @@
 	}
 
 	& code {
-		@apply bg-gray-300 text-gray-600 text-base;
+		@apply bg-gray-300 text-gray-600 text-base px-1 break-words max-w-4xl;
 	}
 
 	& pre {
