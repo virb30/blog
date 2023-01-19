@@ -1,30 +1,35 @@
-import { mount } from '@vue/test-utils';
-import Article from './index.vue';
+import { mount, RouterLinkStub, shallowMount } from '@vue/test-utils';
+import { describe, expect, it, test } from 'vitest';
+import Post from '../../domain/entity/Post';
+import ArticleComponent from './index.vue'
+
 
 describe('Article Component', () => {
-	it('should render post card', () => {
-		const wrapper = mount(Article, {
-			stubs: {
-				NuxtLink: true,
-			},
-			propsData: {
-				post: {
-					uuid: 'post-id',
-					slug: 'post-slug',
-					title: 'Post Title',
-					feature_image: '',
-					primary_author: {
-						name: 'John Doe',
-					},
-					tags: [
-						{ name: 'Teste' },
-						{ name: 'Nuxt' },
-					],
-					updated_at: new Date('2021-10-10'),
-				},
-			},
-		});
+    it('should render post card', () => {
 
-		expect(wrapper.html()).toMatchSnapshot();
-	});
+        const post = new Post(
+            'post-id',
+            'post-slug',
+            'Post Title',
+            '',
+            'post test',
+            new Date('2023-01-01T10:34:21')
+        )
+        post.addTag('Teste')
+        post.addTag('Nuxt')
+        post.setAuthor('John Doe')
+
+        const wrapper = mount(ArticleComponent, {
+            global: {
+                stubs: {
+                    NuxtLink: RouterLinkStub
+                }
+            },
+            props: {
+                post
+            }
+        });
+        expect(wrapper.get('h3').text()).toBe('Post Title')
+        expect(wrapper.html()).toMatchSnapshot();
+    });
 });

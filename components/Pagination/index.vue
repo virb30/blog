@@ -39,8 +39,11 @@ const prevPage = () => {
     }
 };
 
+
 const toPage = (page: number) => {
     emit('change-page', page);
 };
+
+defineExpose({ toPage })
 
 </script>

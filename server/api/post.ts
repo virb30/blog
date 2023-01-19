@@ -1,7 +1,7 @@
-import Post from '~~/domain/entity/Post';
+import { PostOutputDto } from '../../domain/dto/PostOutputDto';
 import { BlogApi, } from '../utils/api';
 
-export default defineEventHandler((event): Promise<Post> => {
+export default defineEventHandler((event: any): Promise<PostOutputDto | void> => {
     const config = useRuntimeConfig()
     const api = new BlogApi(config.ghostUrl, config.ghostKey)
 

@@ -1,6 +1,5 @@
 <template>
     <div class="w-full">
-        <Header />
         <slot />
         <client-only>
             <CookieConsent v-cloak v-if="!policyAccepted" />
@@ -10,9 +9,8 @@
 
 <script setup lang="ts">
 import { onBeforeMount, computed } from 'vue'
-import Header from '~/components/Header/index.vue';
-import CookieConsent from '~/components/CookieConsent/index.vue';
-import { useConsentTermStore } from '~/stores/consent-term';
+import CookieConsent from '../components/CookieConsent/index.vue';
+import { useConsentTermStore } from '../stores/consent-term';
 import { useRoute } from 'vue-router';
 import { useHead } from 'nuxt/app';
 

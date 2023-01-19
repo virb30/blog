@@ -53,7 +53,6 @@
 <script lang="ts" setup>
 import { useHead } from 'nuxt/app';
 
-
 useHead({
     title: 'Sobre | viniboscoa.dev',
 });

@@ -17,13 +17,33 @@
                 </NuxtLink>
             </nav>
             <div class="ml-auto p-4">
-                <SwitchMode />
+                <ThemeSwitcher @change-theme="setColorTheme" :color-mode="props.colorMode" />
             </div>
         </div>
     </header>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue';
+
+
+const props = defineProps({
+    colorMode: {
+        type: String,
+        validator: (value: string) => {
+            return ['dark', 'light'].includes(value)
+        },
+        default: () => 'dark'
+    }
+})
+
+const emit = defineEmits(['change-theme'])
+
+const setColorTheme = (theme: 'dark' | 'light') => {
+    emit('change-theme', theme)
+}
+
+
 </script>
 
 <style scoped lang="postcss">

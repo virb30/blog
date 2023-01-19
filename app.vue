@@ -1,16 +1,25 @@
 <script setup lang="ts">
-import { ref, onBeforeMount } from 'vue';
 import { useHead } from 'nuxt/app';
+import { ref, onBeforeMount, computed, watch } from 'vue';
 import { useBlogStore } from './stores/blog';
 
 const title = ref('viniboscoa.dev');
 const description = ref('Site pessoal e blog para registrar impressões, aprendizados e insights sobre Desenvolvimento Web, Segurança da Informação e Data ScienceSite pessoal e blog com conteúdos sobre Desenvolvimento Web, Segurança da Informação e Data Science')
 
 const blogStore = useBlogStore()
+const colorMode = useColorMode()
+const preference = ref<'dark' | 'light'>('dark')
 
 onBeforeMount(async () => {
     await blogStore.fetchPosts()
 })
+
+colorMode.preference = preference.value
+
+const changeColorTheme = (theme: 'dark' | 'light') => {
+    preference.value = theme
+    colorMode.preference = preference.value
+}
 
 useHead(
     {
@@ -34,7 +43,8 @@ useHead(
 </script>
 
 <template>
-    <div>
+    <div :class="preference">
+        <Header @change-theme="changeColorTheme" :color-mode="preference" />
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>

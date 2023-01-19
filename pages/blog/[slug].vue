@@ -10,8 +10,14 @@
         <Meta name="description" :content="post.metaDescription ?? ''" />
     </Head>
 
-    <main class="mx-auto max-w-6xl py-2 w-full">
-        <article class="max-w-4xl mt-20 mx-auto mb-0 px-4">
+    <main class="mx-auto max-w-6xl py-2 w-full pb-6">
+        <section class="max-w-6xl mt-5 mx-auto mb-8 px-4">
+            <NuxtLink to="/blog">
+                <font-awesome-icon :icon="['fas', 'arrow-left']" class="" />
+                Blog
+            </NuxtLink>
+        </section>
+        <article class="max-w-6xl mx-auto mb-0 px-4">
             <h1 class="font-black text-5xl">
                 {{ post.title }}
             </h1>
@@ -28,7 +34,6 @@
 </template>
 
 <script setup lang="ts">
-import { useFetch, useRoute } from 'nuxt/app';
 import { computed, reactive } from 'vue'
 import { PostOutputDto } from '~/domain/dto/PostOutputDto';
 

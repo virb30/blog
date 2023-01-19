@@ -31,6 +31,14 @@
         & a {
             @apply no-underline;
         }
+
+        & figcaption {
+            @apply text-sm italic font-thin mt-2;
+        }
+
+        & pre {
+            @apply mb-2;
+        }
     }
 
     & code {

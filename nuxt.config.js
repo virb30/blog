@@ -1,8 +1,6 @@
 export default defineNuxtConfig({
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: [
-        '~/assets/styles/tailwind.css',
-        '~/assets/styles/global.css',
         '@fortawesome/fontawesome-svg-core/styles.css'
     ],
 
@@ -30,7 +28,7 @@ export default defineNuxtConfig({
         plugins: {
             'tailwindcss/nesting': {},
             tailwindcss: {
-                viewer: false
+                viewer: false,
             },
             autoprefixer: {},
         }

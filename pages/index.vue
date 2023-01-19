@@ -25,7 +25,7 @@
 <script setup lang="ts">
 import { useHead } from 'nuxt/app';
 import { computed } from 'vue';
-import { useBlogStore } from '~/stores/blog';
+import { useBlogStore } from '../stores/blog';
 
 const blogStore = useBlogStore();
 

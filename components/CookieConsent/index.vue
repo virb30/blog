@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useConsentTermStore } from '~/stores/consent-term';
+import { useConsentTermStore } from '../../stores/consent-term';
 
 const consentTermStore = useConsentTermStore();
 
