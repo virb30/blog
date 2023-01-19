@@ -36,6 +36,7 @@ export default defineNuxtConfig({
 
     colorMode: {
         classSuffix: '',
+        fallback: 'dark'
     },
 
     runtimeConfig: {
@@ -43,7 +44,7 @@ export default defineNuxtConfig({
         ghostUrl: '',
         ghostKey: '',
         public: {
-            googleAnalytics: ''
+            googleAnalyticsId: ''
         },
     },
 
