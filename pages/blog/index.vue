@@ -9,8 +9,10 @@
                     Conteúdo sobre o Desenvolvimento Web e Data Science
                 </p>
             </header>
-            <Spinner v-if="isLoading" />
-            <div
+            <div v-show="isLoading" class="w-full flex justify-center">
+                <Spinner />
+            </div>
+            <div v-show="!isLoading"
                 class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 flex-col sm:flex-row lg:flex-row w-full flex-wrap">
                 <Article v-for="post in posts" :key="post.uuid" :post="post" />
             </div>

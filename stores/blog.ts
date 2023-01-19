@@ -18,7 +18,7 @@ export const useBlogStore = defineStore('blog', {
     state: (): State => ({
         posts: [],
         pagination: {} as Pagination,
-        isLoading: false
+        isLoading: true
     }),
     getters: {
         last3Posts: (state: State) => {
