@@ -1,124 +1,132 @@
 .postContent {
-	@apply mt-8 leading-8 text-lg text-justify;
+    @apply mt-8 leading-8 text-lg text-justify;
 
-	& h1 {
-		@apply font-extrabold text-4xl my-3;
-	}
+    & h1 {
+        @apply font-extrabold text-4xl my-3;
+    }
 
-	& h2 {
-		@apply font-extrabold text-3xl my-3;
-	}
+    & h2 {
+        @apply font-extrabold text-3xl my-3;
+    }
 
-	& h3 {
-		@apply font-extrabold text-2xl my-3;
-	}
+    & h3 {
+        @apply font-extrabold text-2xl my-3;
+    }
 
-	& h4 {
-		@apply font-extrabold text-xl my-3;
-	}
+    & h4 {
+        @apply font-extrabold text-xl my-3;
+    }
 
-	& a {
-		@apply underline font-semibold break-words max-w-4xl;
-	}
+    & a {
+        @apply underline font-semibold break-words max-w-4xl;
+    }
 
-	& figure {
-		@apply mx-auto text-center;
+    & figure {
+        @apply mx-auto text-center;
 
-		& img {
-			@apply mx-auto w-full;
-		}
+        & img {
+            @apply mx-auto w-full;
+        }
 
-		& a {
-			@apply no-underline;
-		}
-	}
+        & a {
+            @apply no-underline;
+        }
 
-	& code {
-		@apply bg-gray-300 text-gray-600 text-base px-1 break-words max-w-4xl;
-	}
+        & figcaption {
+            @apply text-sm italic font-thin mt-2;
+        }
 
-	& pre {
-		@apply bg-gray-300 text-gray-600 p-3 my-6 mx-0 text-base overflow-x-auto text-justify;
+        & pre {
+            @apply mb-2;
+        }
+    }
 
-		& code {
-			@apply break-words max-w-4xl;
-		}
-	}
+    & code {
+        @apply bg-gray-300 text-gray-600 text-base px-1 break-words max-w-4xl;
+    }
 
-	& blockquote {
-		@apply my-6 mx-8;
-	}
+    & pre {
+        @apply bg-gray-300 text-gray-600 p-3 my-6 mx-0 text-base overflow-x-auto text-justify;
 
-	& p,
-	& ul,
-	& ol {
-		@apply my-6 mx-0;
-	}
+        & code {
+            @apply break-words max-w-4xl;
+        }
+    }
 
-	& ul,
-	& ol {
-		@apply pl-6;
-	}
+    & blockquote {
+        @apply my-6 mx-8;
+    }
 
-	& ul {
-		& li {
-			@apply my-2 mx-2 list-disc;
-		}
-	}
+    & p,
+    & ul,
+    & ol {
+        @apply my-6 mx-0;
+    }
 
-	& ol {
-		& li {
-			@apply my-2 mx-2 list-decimal;
-		}
-	}
+    & ul,
+    & ol {
+        @apply pl-6;
+    }
 
-	& hr {
-		@apply my-4;
-	}
+    & ul {
+        & li {
+            @apply my-2 mx-2 list-disc;
+        }
+    }
+
+    & ol {
+        & li {
+            @apply my-2 mx-2 list-decimal;
+        }
+    }
+
+    & hr {
+        @apply my-4;
+    }
 }
 
 .kg-bookmark-card {
-	@apply rounded dark:bg-gray-300 bg-gray-50 dark:text-gray-900;
+    @apply rounded bg-gray-50 dark:text-gray-900 dark:bg-gray-300;
 
-	& + .kg-bookmark-card {
-		@apply mt-4;
-	}
+    &+.kg-bookmark-card {
+        @apply mt-4;
+    }
 
-	& a {
-		@apply flex bg-transparent shadow-none text-base no-underline;
-		min-height: 120px;
+    & a {
+        @apply flex bg-transparent shadow-none text-base no-underline;
+        min-height: 120px;
 
-		& .kg-bookmark-content {
-			@apply flex items-start flex-col flex-grow text-base font-light justify-start p-5;
+        & .kg-bookmark-content {
+            @apply flex items-start flex-col flex-grow text-base font-light justify-start p-5;
 
-			& .kg-bookmark-title {
-				@apply no-underline font-bold;
-			}
+            & .kg-bookmark-title {
+                @apply no-underline font-bold;
+            }
 
-			& .kg-bookmark-description {
-				@apply overflow-y-hidden overflow-ellipsis text-justify max-h-11 mt-1;
-			}
+            & .kg-bookmark-description {
+                @apply overflow-y-hidden overflow-ellipsis text-justify max-h-11 mt-1;
+            }
 
-			& .kg-bookmark-metadata {
-				@apply flex items-center mt-5;
+            & .kg-bookmark-metadata {
+                @apply flex items-center mt-5;
 
-				& .kg-bookmark-author {
-					@apply font-bold ml-3;
-				}
+                & .kg-bookmark-author {
+                    @apply font-bold ml-3;
+                }
 
-				& .kg-bookmark-publisher {
-					@apply ml-6;
-				}
-			}
-		}
+                & .kg-bookmark-publisher {
+                    @apply ml-6;
+                }
+            }
+        }
 
-		& .kg-bookmark-thumbnail {
-			@apply relative flex-grow;
-			min-width: 33%;
+        & .kg-bookmark-thumbnail {
+            @apply relative flex-grow;
+            min-width: 33%;
 
-			& img {
-				@apply object-cover absolute top-0 max-w-full h-full;
-			}
-		}
-	}
+            & img {
+                @apply object-cover absolute top-0 max-w-full h-full;
+            }
+        }
+    }
 }
