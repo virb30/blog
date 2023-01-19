@@ -22,7 +22,7 @@ export class BlogApi {
         this.client = new GhostContentAPI({
             url: baseUrl,
             key,
-            version: 'v4.41',
+            version: 'v4.41'
         })
     }
 

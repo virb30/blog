@@ -34,16 +34,17 @@
 </template>
 
 <script setup lang="ts">
+import { useFetch, useRoute } from 'nuxt/app';
 import { computed, reactive } from 'vue'
 import { PostOutputDto } from '~/domain/dto/PostOutputDto';
 
 const route = useRoute()
 
-const { data } = await useFetch(
+const { data } = await useFetch<PostOutputDto>(
     `/api/post?slug=${route.params.slug}`,
     { server: true }
 );
-const post = reactive(data as PostOutputDto)
+const post = reactive<any>(data)
 
 const updatedAt = computed(() => {
     return post.updatedAt?.toLocaleDateString('pt-BR', {
