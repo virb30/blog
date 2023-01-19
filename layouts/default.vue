@@ -1,47 +1,46 @@
 <template>
-	<div class="w-full" :class="[$colorMode.preference]">
-		<Header />
-		<Nuxt />
-		<client-only>
-			<CookieConsent v-cloak v-if="!policyAccepted"/>
-		</client-only>
-	</div>
+    <div class="w-full">
+        <Header />
+        <slot />
+        <client-only>
+            <CookieConsent v-cloak v-if="!policyAccepted" />
+        </client-only>
+    </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import { mapGetters, mapActions } from 'vuex';
+<script setup lang="ts">
+import { onBeforeMount, computed } from 'vue'
 import Header from '~/components/Header/index.vue';
 import CookieConsent from '~/components/CookieConsent/index.vue';
+import { useConsentTermStore } from '~/stores/consent-term';
+import { useRoute } from 'vue-router';
+import { useHead } from 'nuxt/app';
 
-export default Vue.extend({
-	components: { Header, CookieConsent },
-	beforeMount () {
-		this.fetchFromStorage();
-	},
-	methods: {
-		...mapActions('ConsentTerm', ['fetchFromStorage'])
-	},
-	computed: {
-		...mapGetters('ConsentTerm', {
-			policyAccepted: 'getPolicyAccepted',
-		}),
-	},
-	head () {
-		return {
-			link: [
-				{
-					rel: 'canonical',
-					href: 'https://viniboscoa.dev' + this.$route.path,
-				},
-			],
-		};
-	},
-});
+const consentTermStore = useConsentTermStore()
+
+const fetchFromStorage = () => consentTermStore.fetchFromStorage()
+
+const route = useRoute();
+
+useHead({
+    link: [
+        {
+            rel: 'canonical',
+            href: 'https://viniboscoa.dev' + route.path,
+        },
+    ],
+})
+
+onBeforeMount(() => {
+    fetchFromStorage();
+})
+
+const policyAccepted = computed(() => consentTermStore.getPolicyAccepted)
+
 </script>
 
 <style scoped>
 [v-cloak] {
-  display: none;
+    display: none;
 }
 </style>

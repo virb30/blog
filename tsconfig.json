@@ -1,40 +1,9 @@
 {
-  "compilerOptions": {
-    "target": "ES2018",
-    "module": "ES2020",
-    "moduleResolution": "Node",
-    "lib": [
-      "ESNext",
-      "ESNext.AsyncIterable",
-      "DOM"
-    ],
-    "esModuleInterop": true,
-    "allowJs": true,
-    "sourceMap": true,
-    "strict": true,
-    "noEmit": true,
-    "experimentalDecorators": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ]
-    },
-    "types": [
-      "@nuxt/types",
-      "@types/node",
-			"@types/jest",
-			"@nuxtjs/color-mode",
-			"@nuxt/vue-app"
+    "extends": "./.nuxt/tsconfig.json",
+    "exclude": [
+        "node_modules",
+        ".nuxt",
+        "dist",
+        "**.test.*"
     ]
-  },
-  "exclude": [
-    "node_modules",
-    ".nuxt",
-    "dist",
-		"**.test.*"
-  ]
 }

@@ -1,36 +1,25 @@
 <template>
-	<button
-		type="button"
-		class="bg-transparent border-none text-indigo-500 dark:text-indigo-400 text-3xl"
-		:aria-checked="darkMode.toString()"
-		@click="handleClick"
-	>
-		<FontAwesomeIcon :icon="!darkMode? ['fas', 'lightbulb']: ['far', 'lightbulb']" />
-	</button>
+    <button type="button" class="bg-transparent border-none text-indigo-500 dark:text-indigo-400 text-3xl"
+        :aria-checked="darkMode" @click="handleClick">
+        <font-awesome-icon v-show="darkMode" :icon="['far', 'lightbulb']" />
+        <font-awesome-icon v-show="!darkMode" :icon="['fas', 'lightbulb']" />
+    </button>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faLightbulb as fasLightbulb } from '@fortawesome/free-solid-svg-icons';
-import { faLightbulb as farLightbulb } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+<script setup lang="ts">
+import { computed } from 'vue';
 
-library.add(fasLightbulb, farLightbulb);
+const colorMode = useColorMode()
 
-export default Vue.extend({
-	components: {
-		FontAwesomeIcon,
-	},
-	computed: {
-		darkMode () {
-			return this.$colorMode.preference === 'dark';
-		},
-	},
-	methods: {
-		handleClick () {
-			this.$colorMode.preference = this.darkMode ? 'light' : 'dark';
-		},
-	},
-});
+const darkMode = computed(() => colorMode.preference === 'dark')
+
+type Theme = 'light' | 'dark';
+
+const setColorTheme = (newTheme: Theme) => {
+    colorMode.preference = newTheme
+}
+
+const handleClick = () => {
+    colorMode.preference === 'light' ? setColorTheme('dark') : setColorTheme('light')
+};
 </script>

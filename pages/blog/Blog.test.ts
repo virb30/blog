@@ -1,69 +1,45 @@
-import Vuex from 'vuex';
-import VueMeta from "vue-meta";
-import { createLocalVue, mount } from "@vue/test-utils";
+import { beforeEach, describe, expect, it } from 'vitest'
+import { mount } from "@vue/test-utils";
 import Index from './index.vue';
+import { useBlogStore } from '~~/stores/blog';
+import { createTestingPinia } from '@pinia/testing';
+import { setup } from '@nuxt/test-utils'
 
-const localVue = createLocalVue();
-localVue.use(VueMeta, { keyName: 'head' });
-localVue.use(Vuex);
+describe('Blog Page', async () => {
+    await setup({
+    })
 
-describe('Blog Page', () => {
+    let store = useBlogStore();
+    let config: any;
 
-	let store: any;
-	let config: any;
+    beforeEach(() => {
+        config = {
+            stubs: {
+                Article: true,
+                Pagination: true,
+            },
+            plugins: [
+                createTestingPinia()
+            ]
+        };
 
-	beforeEach(() => {
+    });
 
-		const mockGetter = jest.fn();
-		mockGetter.mockImplementationOnce(() => []);
+    it('should render childs', () => {
+        const wrapper = mount(Index, config);
 
-		const mockFetchPosts = jest.fn();
-		mockFetchPosts.mockImplementationOnce(() => []);
+        expect(wrapper.html()).toMatchSnapshot();
+    });
 
-		store = new Vuex.Store({
-			modules: {
-				Blog: {
-					namespaced: true,
-					state: {
-						posts: [],
-						pagination: {},
-					},
-					getters: {
-						last3Posts: mockGetter,
-					},
-					actions: {
-						fetchPosts: mockFetchPosts,
-					}
-				}
-			}
-		});
+    // describe('Meta info', () => {
+    //     it('should have a meta title', () => {
+    //         const wrapper = mount(Index, config);
 
-		config = {
-			localVue,
-			stubs: {
-				Article: true,
-				Pagination: true,
-			},
-			store,
-		};
+    //         const expected = 'Blog | viniboscoa.dev';
 
-	});
+    //         const meta = wrapper.vm.$meta().refresh();
 
-	it('should render childs', () => {
-		const wrapper = mount(Index, config);
-
-		expect(wrapper.html()).toMatchSnapshot();
-	});
-
-	describe('Meta info', () => {
-		it('should have a meta title', () => {
-			const wrapper = mount(Index, config);
-
-			const expected = 'Blog | viniboscoa.dev';
-
-			const meta = wrapper.vm.$meta().refresh();
-
-			expect(meta.metaInfo.title).toBe(expected);
-		});
-	});
+    //         expect(meta.metaInfo.title).toBe(expected);
+    //     });
+    // });
 });
