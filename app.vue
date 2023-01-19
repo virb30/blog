@@ -8,7 +8,7 @@ const description = ref('Site pessoal e blog para registrar impressões, aprendi
 
 const blogStore = useBlogStore()
 const colorMode = useColorMode()
-const preference = ref<'dark' | 'light'>('dark')
+const preference = ref<'dark' | 'light'>(colorMode.preference)
 
 onBeforeMount(async () => {
     await blogStore.fetchPosts()

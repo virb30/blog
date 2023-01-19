@@ -12,7 +12,7 @@
                     Sobre mim
                 </h2>
                 <p class="text-lg leading-6 my-2 text-justify">
-                    Engenheiro de Computação, especialista em segurança da informação com mais de <strong>7
+                    Engenheiro de Computação, especialista em segurança da informação com mais de <strong>9
                         anos</strong> de experiência como desenvolvedor de sistemas.
                 </p>
                 <p class="text-lg leading-6 my-2 text-justify">

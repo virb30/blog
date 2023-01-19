@@ -9,10 +9,10 @@
         </span>
         <div class="flex mt-6">
             <a href="https://www.linkedin.com/in/vinicius-boscoa"
-                class="block bg-gray-200 rounded py-2 px-3 text-xl text-gray-800">
+                class="block bg-gray-300 rounded py-2 px-3 text-xl text-gray-800">
                 <font-awesome-icon :icon="['fab', 'linkedin-in']" />
             </a>
-            <a href="https://www.github.com/virb30" class="block bg-gray-200 rounded py-2 px-3 text-xl text-gray-800">
+            <a href="https://www.github.com/virb30" class="block bg-gray-300 rounded py-2 px-3 text-xl text-gray-800">
                 <font-awesome-icon :icon="['fab', 'github']" />
             </a>
         </div>
