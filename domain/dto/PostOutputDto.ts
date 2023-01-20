@@ -4,7 +4,7 @@ export interface PostOutputDto {
     title: string;
     featureImage: string;
     excerpt: string;
-    updatedAt: Date;
+    updatedAt: string;
     primaryAuthor: {
         name: string
     };

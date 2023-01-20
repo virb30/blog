@@ -1,4 +1,4 @@
-import { BlogApi, PaginatedPosts } from '../utils/api';
+import { BlogApi, PaginatedPosts } from '../../utils/api';
 
 
 export default defineEventHandler((event: any): Promise<PaginatedPosts> => {
