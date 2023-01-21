@@ -24,6 +24,7 @@
         "@pinia/nuxt": "^0.4.6",
         "@tryghost/content-api": "^1.5.13",
         "core-js": "^3.18.3",
+        "firebase": "^9.16.0",
         "nuxt": "^3.0.0",
         "pinia": "^2.0.29",
         "tailwindcss-dark-mode": "^1.1.7",

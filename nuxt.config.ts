@@ -44,7 +44,14 @@ export default defineNuxtConfig({
         ghostUrl: '',
         ghostKey: '',
         public: {
-            googleAnalyticsId: ''
+            googleAnalyticsId: '',
+            firebaseApiKey: '',
+            firebaseAuthDomain: '',
+            firebaseProjectId: '',
+            firebaseStorageBucket: '',
+            firebaseMessagingSenderId: '',
+            firebaseAppId: '',
+            firebaseMeasurementId: '',
         },
     },
 
