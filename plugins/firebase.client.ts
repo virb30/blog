@@ -16,8 +16,6 @@ export default defineNuxtPlugin(() => {
         measurementId: config.public.firebaseMeasurementId
     };
 
-    console.log(config.public)
-
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
