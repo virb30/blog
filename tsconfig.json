@@ -4,13 +4,14 @@
         "types": [
             "node",
             "nuxt/app",
-            "@nuxt/types"
+            "@nuxt/types",
+            "vue"
         ],
+        "allowJs": true
     },
     "exclude": [
         "node_modules",
         ".nuxt",
-        "dist",
-        "**.test.*"
+        "dist"
     ]
 }

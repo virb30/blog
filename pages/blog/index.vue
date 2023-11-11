@@ -24,7 +24,6 @@
 <script setup lang="ts">
 import { useBlogStore } from '~/stores/blog';
 import { computed } from 'vue';
-import { useHead } from 'nuxt/app';
 
 useHead({
     title: 'Blog | viniboscoa.dev'

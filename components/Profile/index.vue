@@ -9,11 +9,12 @@
         </span>
         <div class="flex mt-6">
             <a href="https://www.linkedin.com/in/vinicius-boscoa"
-                class="block bg-gray-300 rounded py-2 px-3 text-xl text-gray-800" @click="contactAccessed('linkedin')">
+                class="block bg-gray-300 rounded py-2 px-3 text-xl text-gray-800" @click="contactAccessed('linkedin')"
+                id="contact-linkedin">
                 <font-awesome-icon :icon="['fab', 'linkedin-in']" />
             </a>
             <a href="https://www.github.com/virb30" class="block bg-gray-300 rounded py-2 px-3 text-xl text-gray-800"
-                @click="contactAccessed('github')">
+                @click="contactAccessed('github')" id="contact-github">
                 <font-awesome-icon :icon="['fab', 'github']" />
             </a>
         </div>
@@ -21,22 +22,16 @@
 </template>
 
 <script setup lang="ts">
-import { useNuxtApp } from 'nuxt/app';
-import { logEvent } from '@firebase/analytics';
-import { useSessionStore } from '~~/stores/session';
+const props = defineProps(['sessionStore', 'analytics']);
 
-const { $firebase } = useNuxtApp()
-
-const sessionStore = useSessionStore()
+const { sessionStore, analytics } = props;
 
 const contactAccessed = (type: string) => {
 
     const sessionId = sessionStore.sessionId
 
-    console.log(sessionId)
-
     if (sessionId) {
-        logEvent($firebase.analytics, 'contact', {
+        analytics.logEvent('contact', {
             type,
             sessionId
         })

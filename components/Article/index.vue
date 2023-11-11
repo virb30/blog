@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import { PropType } from 'vue';
+import type { PropType } from 'vue';
 import Post from '../../domain/entity/Post'
 
 const props = defineProps({

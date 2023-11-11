@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
     // Global CSS: https://go.nuxtjs.dev/config-css
+    buildModules: ['@nuxt/typescript-build'],
     css: [
         '@fortawesome/fontawesome-svg-core/styles.css'
     ],
@@ -54,5 +55,23 @@ export default defineNuxtConfig({
             firebaseMeasurementId: process.env.NUXT_FIREBASE_MEASUREMENT_ID || '',
         },
     },
+
+    app: {
+        head: {
+            htmlAttrs: {
+                lang: 'pt-BR',
+            },
+            charset: 'utf-8',
+            viewport: 'width=device-width, initial-scale=1',
+            meta: [
+                { name: 'theme-color', content: '#E5E7EB' },
+            ],
+            link: [
+                { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+                { href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap', rel: 'stylesheet' },
+                { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+            ]
+        }
+    }
 
 });

@@ -1,8 +1,12 @@
 <template>
     <main class="flex flex-col lg:flex-row m-auto max-w-6xl">
+
+        <Head>
+            <Title> {{ title }}</Title>
+        </Head>
         <aside class="flex flex-col justify-center items-center w-full">
             <div class="my-6">
-                <Profile />
+                <Profile :sessionStore="$props.sessionStore" :analytics="$props.analytics" />
             </div>
         </aside>
 
@@ -51,11 +55,11 @@
 </template>
 
 <script lang="ts" setup>
-import { useHead } from 'nuxt/app';
+import { ref } from 'vue';
 
-useHead({
-    title: 'Sobre | viniboscoa.dev',
-});
+defineProps(['sessionStore', 'analytics']);
+
+const title = ref('Sobre | viniboscoa.dev');
 </script>
 
 <style scoped lang="postcss">

@@ -1,12 +1,12 @@
 // Vitest Snapshot v1
 
 exports[`Header Component > should render childs 1`] = `
-"<header class=\\"h-20 border-0 border-b border-solid border-gray-400 dark:border-gray-100\\" data-v-f744be1a=\\"\\">
-  <div class=\\"max-w-7xl h-20 my-0 mx-auto p-4 flex items-center justify-between\\" data-v-f744be1a=\\"\\">
-    <logo-stub class=\\"max-w-xs hidden md:block lg:block xl:block\\" data-v-f744be1a=\\"\\"></logo-stub>
-    <nav class=\\"md:ml-20 h-20\\" data-v-f744be1a=\\"\\"><a exact=\\"\\" active-class=\\"active\\" class=\\"hover:text-black dark:hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\" data-v-f744be1a=\\"\\"> Home </a><a active-class=\\"active\\" class=\\"hover:text-black dark:hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\" data-v-f744be1a=\\"\\"> Sobre </a><a active-class=\\"active\\" class=\\"hover:text-black dark:hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\" data-v-f744be1a=\\"\\"> Blog </a></nav>
-    <div class=\\"ml-auto p-4\\" data-v-f744be1a=\\"\\">
-      <theme-switcher-stub color-mode=\\"dark\\" data-v-f744be1a=\\"\\"></theme-switcher-stub>
+"<header data-v-f744be1a=\\"\\" class=\\"h-20 border-0 border-b border-solid border-gray-400 dark:border-gray-100\\">
+  <div data-v-f744be1a=\\"\\" class=\\"max-w-7xl h-20 my-0 mx-auto p-4 flex items-center justify-between\\">
+    <logo-stub data-v-f744be1a=\\"\\" class=\\"max-w-xs hidden md:block lg:block xl:block\\"></logo-stub>
+    <nav data-v-f744be1a=\\"\\" class=\\"md:ml-20 h-20\\"><a data-v-f744be1a=\\"\\" exact=\\"\\" active-class=\\"active\\" class=\\"hover:text-black dark:hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\"> Home </a><a data-v-f744be1a=\\"\\" active-class=\\"active\\" class=\\"hover:text-black dark:hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\"> Sobre </a><a data-v-f744be1a=\\"\\" active-class=\\"active\\" class=\\"hover:text-black dark:hover:text-white inline-block relative py-0 px-3 h-20 leading-20 transition-color-2 mx-1\\"> Blog </a></nav>
+    <div data-v-f744be1a=\\"\\" class=\\"ml-auto p-4\\">
+      <theme-switcher-stub data-v-f744be1a=\\"\\" color-mode=\\"dark\\"></theme-switcher-stub>
     </div>
   </div>
 </header>"

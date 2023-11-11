@@ -1,3 +1,5 @@
 // Vitest Snapshot v1
 
+exports[`Profile Component > should create component and log event childs 1`] = `[Function]`;
+
 exports[`Profile Component > should render childs 1`] = `[Function]`;
