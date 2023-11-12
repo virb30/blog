@@ -2,9 +2,6 @@
 import { ref, onBeforeMount, computed, onMounted } from 'vue';
 import { useBlogStore } from './stores/blog';
 import { useSessionStore } from './stores/session';
-import { useNuxtApp } from '#app';
-import { FirebaseAnalyticsAdapter } from './adapters/analytics/firebase.analytics.adapter';
-import type { Analytics } from 'firebase/analytics';
 
 const title = ref('viniboscoa.dev');
 const description = ref('Site pessoal e blog para registrar impressões, aprendizados e insights sobre Desenvolvimento Web, Segurança da Informação e Data ScienceSite pessoal e blog com conteúdos sobre Desenvolvimento Web, Segurança da Informação e Data Science')
@@ -31,9 +28,6 @@ const changeColorTheme = (theme: 'dark' | 'light') => {
 
 const preference = computed(() => colorMode.preference === 'system' ? 'dark' : colorMode.preference)
 
-const { $firebase } = useNuxtApp()
-
-const analytics = new FirebaseAnalyticsAdapter($firebase.analytics as Analytics);
 
 </script>
 
@@ -46,7 +40,7 @@ const analytics = new FirebaseAnalyticsAdapter($firebase.analytics as Analytics)
         </Head>
         <Header @change-theme="changeColorTheme" :color-mode="preference" />
         <NuxtLayout>
-            <NuxtPage :sessionStore="sessionStore" :analytics="analytics" />
+            <NuxtPage />
         </NuxtLayout>
     </div>
 </template>

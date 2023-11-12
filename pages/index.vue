@@ -1,12 +1,8 @@
 <template>
     <main>
-
-        <Head>
-            <Title> {{ title }}</Title>
-        </Head>
         <div
             class="banner w-full bg-cover bg-fixed bg-center flex items-center justify-center flex-col py-16 px-8 text-white">
-            <Profile :sessionStore="$props.sessionStore" :analytics="$props.analytics" />
+            <Profile />
         </div>
         <div class="mx-auto max-w-6xl p-4">
             <h2 class="my-4 font-bold text-xl">
@@ -29,13 +25,12 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useBlogStore } from '../stores/blog';
-import { ref } from 'vue';
 
-defineProps(['sessionStore', 'analytics']);
+useHead({
+    title: 'Home | viniboscoa.dev'
+});
 
 const blogStore = useBlogStore();
-
-const title = ref('Home | viniboscoa.dev');
 
 const posts = computed(() => blogStore.last3Posts)
 </script>

@@ -2,7 +2,8 @@ export default defineNuxtConfig({
     // Global CSS: https://go.nuxtjs.dev/config-css
     buildModules: ['@nuxt/typescript-build'],
     css: [
-        '@fortawesome/fontawesome-svg-core/styles.css'
+        '@fortawesome/fontawesome-svg-core/styles.css',
+        '~/assets/scss/main.scss'
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules

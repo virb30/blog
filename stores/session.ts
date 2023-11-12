@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-interface State {
+export type State = {
     sessionId: string | null;
 }
 

@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, type FirebaseOptions } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { defineNuxtPlugin, useRuntimeConfig } from "nuxt/app";
 
@@ -14,7 +14,7 @@ export default defineNuxtPlugin(() => {
         messagingSenderId: config.public.firebaseMessagingSenderId,
         appId: config.public.firebaseAppId,
         measurementId: config.public.firebaseMeasurementId
-    };
+    } as FirebaseOptions;
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);

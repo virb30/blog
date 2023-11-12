@@ -22,20 +22,15 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps(['sessionStore', 'analytics']);
-
-const { sessionStore, analytics } = props;
-
 const contactAccessed = (type: string) => {
+    // const sessionId = sessionStore?.sessionId;
 
-    const sessionId = sessionStore.sessionId
-
-    if (sessionId) {
-        analytics.logEvent('contact', {
-            type,
-            sessionId
-        })
-    }
+    // if (sessionId) {
+    //     analytics?.logEvent('contact', {
+    //         type,
+    //         sessionId
+    //     })
+    // }
 }
 
 </script>

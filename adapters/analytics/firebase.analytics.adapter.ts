@@ -7,7 +7,7 @@ export class FirebaseAnalyticsAdapter implements AnalyticsInterface {
     constructor(private analytics: Analytics) { }
 
     logEvent(type: string, content: any): void {
-        return logEvent(this.analytics, type, content);
+        logEvent(this.analytics, type, content);
     }
 
 }

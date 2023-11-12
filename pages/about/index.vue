@@ -6,7 +6,7 @@
         </Head>
         <aside class="flex flex-col justify-center items-center w-full">
             <div class="my-6">
-                <Profile :sessionStore="$props.sessionStore" :analytics="$props.analytics" />
+                <Profile />
             </div>
         </aside>
 
@@ -56,8 +56,6 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-
-defineProps(['sessionStore', 'analytics']);
 
 const title = ref('Sobre | viniboscoa.dev');
 </script>

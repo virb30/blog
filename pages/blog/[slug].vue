@@ -1,5 +1,4 @@
 <template>
-
     <Head v-if="post">
         <Title>{{ `${post.title} | viniboscoa.dev` }}</Title>
         <Meta property="og:title" :content="post.title" />
@@ -28,7 +27,7 @@
                 |
                 <span class="ml-2 block">{{ post.readingTime }} min de leitura</span>
             </div>
-            <div class="postContent" v-html="post.html" />
+            <ContentRenderer :content="post.html" />
         </article>
     </main>
 </template>
@@ -36,9 +35,9 @@
 <script setup lang="ts">
 import { createError, useAsyncData, useRoute } from 'nuxt/app';
 import { computed } from 'vue'
-import { PostOutputDto } from '~/domain/dto/PostOutputDto';
+import type { PostOutputDto } from '~/domain/dto/PostOutputDto';
 
-const route = useRoute()
+const route = useRoute();
 
 const { data: post, pending, error } = await useAsyncData<PostOutputDto>(
     `post:${route.params.slug}`,
@@ -50,7 +49,7 @@ const { data: post, pending, error } = await useAsyncData<PostOutputDto>(
     {
         server: true
     }
-)
+);
 
 if (error.value) {
     throw createError({ data: { redirectTo: "/blog" }, message: "Voltar ao blog", statusCode: 404, statusMessage: 'Post não encontrado' })
@@ -67,11 +66,8 @@ const formattedUpdatedAt = computed(() => {
 
 const authorName = computed(() => {
     return post.value?.primaryAuthor?.name ?? ''
-})
-
+});
 
 </script>
 
-<style src="./post.css">
-
-</style>
+<style src="./post.css"></style>
