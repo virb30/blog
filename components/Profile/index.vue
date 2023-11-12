@@ -22,8 +22,12 @@
 </template>
 
 <script setup lang="ts">
+import { useSessionStore } from '~/stores/session';
+
+const sessionStore = useSessionStore();
+
 const contactAccessed = (type: string) => {
-    // const sessionId = sessionStore?.sessionId;
+    const sessionId = sessionStore?.sessionId;
 
     // if (sessionId) {
     //     analytics?.logEvent('contact', {

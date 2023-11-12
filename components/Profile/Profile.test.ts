@@ -1,19 +1,23 @@
 import { mount } from "@vue/test-utils";
-import { describe, expect, it, vitest } from "vitest";
+import { describe, expect, it, vi, vitest } from "vitest";
 import Profile from './index.vue';
+import { createTestingPinia } from '@pinia/testing'
 
 describe('Profile Component', () => {
-    it.skip('should render childs', () => {
+    it('should render childs', () => {
         const wrapper = mount(Profile, {
             global: {
-                provide: {
-                    sessionStore: {
-                        sessionId: '1'
-                    },
-                    analytics: {
-                        logEvent: vitest.fn()
-                    }
-                },
+                plugins: [
+                    createTestingPinia({
+                        stubActions: false,
+                        initialState: {
+                            sessionStore: {
+                                sessionId: '1'
+                            }
+                        },
+                        createSpy: vi.fn()
+                    })
+                ],
                 stubs: {
                     'font-awesome-icon': true
                 },
@@ -27,14 +31,22 @@ describe('Profile Component', () => {
         const logEventSpy = vitest.fn()
         const wrapper = mount(Profile, {
             global: {
-                provide: {
-                    sessionStore: {
-                        sessionId: '1'
-                    },
-                    analytics: {
+                mocks: {
+                    'useAnalytics': {
                         logEvent: logEventSpy
                     }
                 },
+                plugins: [
+                    createTestingPinia({
+                        stubActions: false,
+                        initialState: {
+                            sessionStore: {
+                                sessionId: '1'
+                            }
+                        },
+                        createSpy: vi.fn()
+                    })
+                ],
                 stubs: {
                     'font-awesome-icon': true
                 },
