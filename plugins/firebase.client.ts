@@ -1,8 +1,9 @@
-import { initializeApp, type FirebaseOptions } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import type { FirebaseOptions } from "firebase/app";
 import { defineNuxtPlugin, useRuntimeConfig } from "nuxt/app";
+import { FirebaseAnalyticsAdapter } from "~/adapters/analytics/firebase.analytics.adapter";
+import type { AnalyticsInterface } from "~/adapters/analytics/analytics.interface";
 
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin<{ analytics: AnalyticsInterface }>(() => {
 
     const config = useRuntimeConfig()
 
@@ -17,15 +18,11 @@ export default defineNuxtPlugin(() => {
     } as FirebaseOptions;
 
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    const analytics = new FirebaseAnalyticsAdapter(firebaseConfig);
 
     return {
         provide: {
-            firebase: {
-                app,
-                analytics
-            }
+            analytics
         }
     }
 })

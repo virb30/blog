@@ -25,16 +25,17 @@
 import { useSessionStore } from '~/stores/session';
 
 const sessionStore = useSessionStore();
+const analytics = useAnalytics();
 
 const contactAccessed = (type: string) => {
     const sessionId = sessionStore?.sessionId;
 
-    // if (sessionId) {
-    //     analytics?.logEvent('contact', {
-    //         type,
-    //         sessionId
-    //     })
-    // }
+    if (sessionId) {
+        analytics.logEvent('contact', {
+            type,
+            sessionId
+        })
+    }
 }
 
 </script>
