@@ -1,14 +1,14 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Article Component > should render post card 1`] = `
-"<a data-v-91b4acce=\\"\\">
-  <article data-v-91b4acce=\\"\\" class=\\"bg-gray-300 dark:bg-gray-600 hover:opacity-80 rounded-lg\\">
-    <header data-v-91b4acce=\\"\\" class=\\"h-80 mb-3\\"><img data-v-91b4acce=\\"\\" src=\\"\\" alt=\\"post-slug\\" class=\\"h-48 mx-auto rounded-t-lg w-full\\">
-      <h3 data-v-91b4acce=\\"\\" class=\\"mt-6 font-bold text-lg px-4 block overflow-ellipsis overflow-hidden\\">Post Title</h3>
-      <h5 data-v-91b4acce=\\"\\" class=\\"px-4 text-sm opacity-80 mt-2\\"> por John Doe</h5>
+"<a data-v-91b4acce="">
+  <article data-v-91b4acce="" class="bg-gray-300 dark:bg-gray-600 hover:opacity-80 rounded-lg">
+    <header data-v-91b4acce="" class="h-80 mb-3"><img data-v-91b4acce="" src="" alt="post-slug" class="h-48 mx-auto rounded-t-lg w-full">
+      <h3 data-v-91b4acce="" class="mt-6 font-bold text-lg px-4 block overflow-ellipsis overflow-hidden">Post Title</h3>
+      <h5 data-v-91b4acce="" class="px-4 text-sm opacity-80 mt-2"> por John Doe</h5>
     </header>
-    <section data-v-91b4acce=\\"\\" class=\\"px-4 mt-1 h-52\\">
-      <p data-v-91b4acce=\\"\\" class=\\"text-base overflow-ellipsis overflow-hidden text-justify _clamp-text_a58f70 _clamp-lines-lg_a58f70\\">post test</p>
+    <section data-v-91b4acce="" class="px-4 mt-1 h-52">
+      <p data-v-91b4acce="" class="text-base overflow-ellipsis overflow-hidden text-justify _clamp-text_a58f70 _clamp-lines-lg_a58f70">post test</p>
     </section>
   </article>
 </a>"

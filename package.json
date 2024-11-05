@@ -19,6 +19,7 @@
         "@fortawesome/free-solid-svg-icons": "^6.2.1",
         "@fortawesome/vue-fontawesome": "^3.0.2",
         "@highlightjs/vue-plugin": "^2.1.0",
+        "@nuxt/fonts": "^0.10.2",
         "@nuxtjs/color-mode": "^3.2.0",
         "@nuxtjs/sitemap": "^2.4.0",
         "@nuxtjs/vercel-builder": "^0.24.0",
@@ -28,7 +29,7 @@
         "firebase": "^9.16.0",
         "highlight.js": "^11.9.0",
         "lru-cache": "^10.0.2",
-        "nuxt": "^3.8.1",
+        "nuxt": "^3.14.0",
         "pinia": "^2.0.29",
         "tailwindcss-dark-mode": "^1.1.7",
         "vue-gtag": "2",
@@ -39,7 +40,7 @@
         "@babel/core": "^7.15.8",
         "@babel/preset-env": "^7.15.8",
         "@babel/preset-typescript": "^7.15.0",
-        "@nuxt/test-utils": "^3.0.0",
+        "@nuxt/test-utils": "^3.14.4",
         "@nuxt/types": "^2.15.8",
         "@nuxtjs/eslint-config-typescript": "^12.0.0",
         "@nuxtjs/eslint-module": "^3.0.2",
@@ -50,7 +51,7 @@
         "@types/vue": "^2.0.0",
         "@vitejs/plugin-vue": "^4.0.0",
         "@vue/babel-preset-app": "^5.0.8",
-        "@vue/test-utils": "^2.2.7",
+        "@vue/test-utils": "^2.4.6",
         "autoprefixer": "^10.4.13",
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "^10.1.0",
@@ -59,13 +60,15 @@
         "eslint": "^8.0.1",
         "eslint-plugin-nuxt": "^4.0.0",
         "eslint-plugin-vue": "^9.9.0",
-        "happy-dom": "^8.1.4",
+        "happy-dom": "^15.9.0",
         "npm-check-updates": "^16.6.2",
         "playwright": "^1.15.2",
+        "playwright-core": "^1.48.2",
         "postcss": "^8.4.21",
         "postcss-nesting": "^10.2.0",
         "sass": "^1.69.5",
         "tailwindcss": "^3.2.4",
-        "vitest": "^0.27.2"
-    }
+        "vitest": "^2.1.4"
+    },
+    "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d"
 }

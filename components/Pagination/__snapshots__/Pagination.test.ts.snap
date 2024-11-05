@@ -1,11 +1,11 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Pagination Component > render > should render childs 1`] = `
-"<div class=\\"flex flex-col items-center my-12\\">
-  <div class=\\"flex\\"><button type=\\"button\\" disabled=\\"\\" class=\\"h-8 w-8 flex justify-center items-center border border-gray-400 bg-gray-300 dark:bg-gray-600 opacity-40 cursor-not-allowed\\">
-      <font-awesome-icon-stub icon=\\"fas,chevron-left\\"></font-awesome-icon-stub>
-    </button><button type=\\"button\\" disabled=\\"\\" class=\\"h-8 w-8 flex justify-center items-center border border-gray-400 bg-gray-300 dark:bg-gray-600 bg-indigo-500 dark:bg-indigo-500 cursor-default text-gray-50\\">1</button><button type=\\"button\\" class=\\"h-8 w-8 flex justify-center items-center border border-gray-400 bg-gray-300 dark:bg-gray-600 hover:opacity-80 cursor-pointer\\">2</button><button type=\\"button\\" class=\\"h-8 w-8 flex justify-center items-center border border-gray-400 bg-gray-300 dark:bg-gray-600 hover:opacity-80 cursor-pointer\\">
-      <font-awesome-icon-stub icon=\\"fas,chevron-right\\"></font-awesome-icon-stub>
+"<div class="flex flex-col items-center my-12">
+  <div class="flex"><button type="button" disabled="" class="h-8 w-8 flex justify-center items-center border border-gray-400 bg-gray-300 dark:bg-gray-600 opacity-40 cursor-not-allowed">
+      <font-awesome-icon-stub icon="fas,chevron-left"></font-awesome-icon-stub>
+    </button><button type="button" disabled="" class="h-8 w-8 flex justify-center items-center border border-gray-400 bg-gray-300 dark:bg-gray-600 bg-indigo-500 dark:bg-indigo-500 cursor-default text-gray-50">1</button><button type="button" class="h-8 w-8 flex justify-center items-center border border-gray-400 bg-gray-300 dark:bg-gray-600 hover:opacity-80 cursor-pointer">2</button><button type="button" class="h-8 w-8 flex justify-center items-center border border-gray-400 bg-gray-300 dark:bg-gray-600 hover:opacity-80 cursor-pointer">
+      <font-awesome-icon-stub icon="fas,chevron-right"></font-awesome-icon-stub>
     </button></div>
 </div>"
 `;

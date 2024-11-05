@@ -1,0 +1,8 @@
+﻿@font-face {
+  font-family: "Aquiline";
+  src: url("Aquiline.ttf.woff") format("woff"),
+    url("Aquiline.ttf.svg#Aquiline") format("svg"), url("Aquiline.ttf.eot"),
+    url("Aquiline.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}

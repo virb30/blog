@@ -1,0 +1,527 @@
+@keyframes letter-hover {
+  50% {
+    -webkit-transform: translateY(2rem);
+    transform: translateY(2rem);
+  }
+}
+
+/* Container for the animated letter */
+.letter__container {
+  color: black;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Styles for the letter including hover animation */
+.letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  perspective: 1000px;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.letter:not(.flipped):not(.unfolded) {
+  animation: letter-hover ease-in-out 5s infinite;
+}
+.letter.flipped {
+  transform: rotateY(180deg);
+}
+.letter.unfolded {
+  animation: none;
+}
+
+/* Styles for folds within the letter */
+.fold {
+  width: 100%;
+  height: 33.33%;
+  background-color: #f5f5dc;
+  position: absolute;
+  transform-origin: top;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fold.folded {
+  transform: rotateX(-170deg);
+}
+.fold1 {
+  top: 0;
+  transform-origin: bottom;
+  z-index: 2;
+}
+.fold2 {
+  top: 33.33%;
+  z-index: 1;
+  border-top: 1px solid #909090;
+}
+.fold3 {
+  top: 66.8%;
+  opacity: 0;
+  z-index: 0;
+  border-top: 1px solid #909090;
+}
+.fold3:not(.folded) {
+  opacity: 1;
+}
+
+/* Content visibility toggling */
+.front__content {
+  display: block;
+}
+.back__content {
+  display: none;
+  transform: rotateY(180deg);
+}
+.letter.flipped .back__content {
+  display: block;
+  transform: rotateY(-180deg);
+  opacity: 1;
+}
+.letter.flipped .front__content {
+  display: none;
+}
+
+/* Responsive adjustments for larger screens */
+@media screen and (min-width: 768px) {
+  .letter__container {
+    width: 80%;
+    max-width: 800px;
+    padding: 30px;
+  }
+  .letter {
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .letter__container {
+    width: 70%;
+    max-width: 1000px;
+    padding: 40px;
+  }
+  .letter {
+    height: 1000px;
+  }
+}
+
+
+.content__container {
+  display: block;
+  /* Change display to block for better responsiveness */
+  z-index: 4;
+  position: relative;
+}
+
+/* General Content Styles */
+.content {
+  padding: 0 20px;
+  /* Adjust padding for smaller screens */
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Bluu Next Bold", serif;
+  color: #0c0434;
+  font-size: 0.6em;
+}
+
+.crest {
+  display: flex;
+  width: 8.5em;
+  margin: 0 auto;
+}
+
+.italicize {
+  font-style: italic;
+  font-size: 0.8em;
+  color: #0c0434;
+}
+
+.content p {
+  font-size: 0.8em;
+  /* Adjust font size for smaller screens */
+  font-family: "magik";
+}
+
+/* Signature and Sign-Off Styles */
+.content__signOff {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  margin-top: 0.7em;
+  margin-right: 2em;
+  /* Adjust margin for smaller screens */
+}
+
+.content__signOff p {
+  font-family: "magik";
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.content__signature {
+  font-family: "Aquiline", cursive, serif !important;
+  font-size: 1em !important;
+  /* Adjust font size for smaller screens */
+  margin-top: -1em !important;
+  /* Adjust margin for smaller screens */
+}
+
+/* Footer Styles */
+.content__footer {
+  text-align: center;
+  margin-top: 1em;
+  /* Adjust margin for smaller screens */
+}
+
+.content__footerText {
+  text-align: center;
+  color: #000 !important;
+  font-size: 0.6em;
+  /* Adjust font size for smaller screens */
+}
+
+.content__footer h2 {
+  font-size: 0.65em;
+  /* Adjust font size for smaller screens */
+}
+
+.content__footer p {
+  font-family: "Bluu Next Bold", serif;
+  font-size: 0.53em;
+  /* Adjust font size for smaller screens */
+  margin: -0.5em;
+}
+
+li::marker {
+  color: #0c0434;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+li {
+  font-family: "HarryPotter7", sans-serif;
+  font-size: 0.85em;
+}
+
+/* Back Content Styles */
+.back__content__heading p {
+  margin-top: 0.3em;
+}
+
+.back__header__list {
+  margin-top: 0em;
+  margin-bottom: -0.4em;
+}
+
+.back__content__heading h4 {
+  font-size: 0.5em;
+}
+
+.back__content__body {
+  margin-top: -0.5em;
+}
+
+.back__content__body p {
+  margin-top: -0.5em;
+}
+
+.back__body__list,
+.back__header__list,
+.back__footer__list {
+  padding: 0 1em;
+  /* Remove padding for smaller screens */
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  line-height: 0.6em;
+}
+
+.back__header__list li,
+.back__body__list li,
+.back__footer__list li {
+  font-size: 0.5em;
+}
+
+.back__body__list li {
+  font-size: 0.4em;
+  padding: 0.1em 0;
+  /* Adjust padding for smaller screens */
+  line-height: 1.5em;
+  /* Adjust line height for smaller screens */
+}
+
+.back__content p {
+  margin: 0.2em 0;
+  /* Adjust margin for smaller screens */
+  font-size: 0.7;
+}
+
+.back__header__list li {
+  padding: 0.2em 0;
+  /* Adjust padding for smaller screens */
+}
+
+.back__content__footer h4 {
+  font-size: 0.5em;
+  margin: 0.5em 0;
+}
+
+.back__footer {
+  margin-top: 1em;
+  /* Adjust margin for smaller screens */
+  text-align: center;
+}
+
+/* For screens larger than 768px */
+@media screen and (min-width: 768px) {
+  .content__container {
+    max-width: 800px;
+    /* Set a maximum width for larger screens */
+    margin: 0 auto;
+    /* Center the content horizontally */
+  }
+
+  .content {
+    padding: 0 50px;
+    /* Increase padding for larger screens */
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: 1.3em;
+    /* Increase font size for larger screens */
+    margin-bottom: 0.5em;
+  }
+
+  .crest {
+    width: 14em;
+    /* Increase the width of the crest for larger screens */
+  }
+
+  .italicize {
+    font-size: 1em;
+    /* Increase font size for larger screens */
+  }
+
+  .content p {
+    font-size: 1.4em;
+    /* Increase font size for larger screens */
+  }
+
+  .content__signOff {
+    margin-top: 1em;
+    /* Adjust margin for larger screens */
+    margin-right: 4em;
+    /* Adjust margin for larger screens */
+  }
+
+  .content__signOff p {
+    font-family: "magik";
+    font-size: 1.4em;
+    margin: 0;
+  }
+
+  .content__signature {
+    font-size: 1.7em !important;
+    /* Increase font size for larger screens */
+    margin-top: -1em !important;
+    /* Adjust margin for larger screens */
+  }
+
+  .content__footer {
+    margin-top: 3em;
+    /* Adjust margin for larger screens */
+  }
+
+  .content__footerText {
+    font-size: 1.2em;
+    /* Increase font size for larger screens */
+  }
+
+  .content__footer h2 {
+    font-size: 1em;
+    /* Increase font size for larger screens */
+  }
+
+  .content__footer p {
+    font-size: 0.8em;
+    /* Increase font size for larger screens */
+  }
+
+  .back__header__list {
+    line-height: 1.3em;
+  }
+
+  .back__footer__list {
+    padding: 0 1em;
+    /* Remove padding for smaller screens */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .back__header__list li,
+  .back__body__list li,
+  .back__footer__list li {
+    font-size: 0.8em;
+    line-height: 1.3em;
+  }
+
+  .back__content__body h3 {
+    margin-bottom: 0em;
+  }
+
+  .back__body__list li {
+    padding: 0.3em 0;
+    /* Adjust padding for larger screens */
+    font-size: 0.7em;
+    /* Adjust line height for larger screens */
+  }
+
+  .back__content p {
+    margin: 0.5em 0.1;
+    /* Adjust margin for larger screens */
+    font-size: 1.5em;
+    /* Increase font size for larger screens */
+  }
+
+  .back__content__heading h4 {
+    font-size: 1em;
+  }
+
+  .back__content__footer h4 {
+    font-size: 1em;
+    /* Increase font size for larger screens */
+  }
+}
+
+/* Adjustments for screens larger than 1024px */
+@media screen and (min-width: 1024px) {
+  .content__container {
+    max-width: 1000px;
+    /* Extend maximum width for larger screens */
+  }
+
+  .content {
+    padding: 0 70px;
+    /* Further increase padding for larger screens */
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: 1.5em;
+    /* Increase font size for larger screens */
+  }
+
+  .crest {
+    width: 18em;
+    /* Further increase the width of the crest for larger screens */
+  }
+
+  .italicize {
+    font-size: 0.8em;
+    /* Increase font size for larger screens */
+  }
+
+  .content p {
+    font-size: 2em;
+    /* Further increase font size for larger screens */
+  }
+
+  .content__signOff {
+    margin-top: 1.5em;
+    /* Further adjust margin for larger screens */
+    margin-right: 6em;
+    /* Further adjust margin for larger screens */
+  }
+
+  .content__signOff p {
+    font-size: 2em;
+    /* Increase font size for larger screens */
+  }
+
+  .content__signature {
+    font-size: 2.5em !important;
+    /* Further increase font size for larger screens */
+    margin-top: -1em !important;
+    /* Further adjust margin for larger screens */
+  }
+
+  .content__footer {
+    margin-top: 2em;
+    /* Further adjust margin for larger screens */
+  }
+
+  .content__footerText {
+    font-size: 1.3em;
+    /* Increase font size for larger screens */
+  }
+
+  .content__footer h2 {
+    font-size: 1.2em;
+    /* Increase font size for larger screens */
+  }
+
+  .content__footer p {
+    font-size: 0.95em;
+    /* Increase font size for larger screens */
+  }
+
+  .back__header__list {
+    margin-top: -1em;
+    margin-bottom: -0.5em;
+  }
+
+  .back__body__list li {
+    /* padding: 0.1em; */
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+
+  .back__body__list,
+  .back__header__list,
+  .back__footer__list {
+    padding: 0.5em 1.5em;
+  }
+
+  .back__header__list li,
+  .back__footer__list li {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+
+  .back__content p {
+    margin: 0.3em 0.2em;
+    /* Further adjust margin for larger screens */
+    font-size: 1.8em;
+    /* Further increase font size for larger screens */
+  }
+
+  .back__content__body p {
+    margin-bottom: -0.2em;
+  }
+
+  .back__content__heading h4 {
+    font-size: 1.2em;
+    /* Increase font size for larger screens */
+  }
+
+  .back__content__footer h4 {
+    font-size: 1.2em;
+    /* Increase font size for larger screens */
+  }
+
+  .footer__heading {
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+  }
+}
