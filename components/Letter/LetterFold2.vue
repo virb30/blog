@@ -1,52 +1,57 @@
 <template>
   <div class="content__container">
     <div class="content front__content">
-      <p class="content__greeting">{{ `Dear ${title} ${surname},` }}</p>
-      <p class="content__body">
-        We are pleased to inform you that you have a place at Hogwarts School
-        of Witchcraft and Wizardry. Please find enclosed a list of all
-        necessary books and equipment. Term begins on 1 September. We await
-        your owl by no later than 31 July.
-      </p>
+      <p class="content__greeting">{{ `${greetings} ${title} ${surname},` }}</p>
+			<section class="content__body">
+				<p class="content__paragraph">
+					Temos o prazer de informar que V. Sa. tem uma vaga na Escola de Magia e
+					Bruxaria de Hogwarts. Estamos anexando uma lista dos livros e equipamentos
+					necessários.
+				</p>
+				<p class="content__paragraph">
+					O ano letivo se inicia em 1 de setembro. Aguardamos sua coruja até 31 de
+					julho, no mais tardar.
+				</p>
+			</section>
     </div>
     <div class="content back__content back__content__body page2-content">
-      <h3 class="back__section__heading">SET BOOKS</h3>
-      <p>All students should have a copy of each of the following:</p>
+      <h3 class="back__section__heading">LIVROS</h3>
+      <p>Os alunos devem comprar um exemplar de cada um dos seguintes:</p>
       <ul class="back__body__list">
         <li>
           <span v-html="applyItalicization(
-            'The Standard Book of Spells (Grade 1) by Miranda Goshawk'
+            'Livro padrão de feitiços (série 1) por Miranda Goshawk'
           )" />
         </li>
         <li>
-          <span v-html="applyItalicization('A History of Magic by Bathilda Bagshot')" />
+          <span v-html="applyItalicization('História da Magia por Bathilda Bagshot')" />
         </li>
         <li>
-          <span v-html="applyItalicization('Magical Theory by Adalbert Waffling')" />
-        </li>
-        <li>
-          <span v-html="applyItalicization(
-            'A Beginner’s Guide to Transfiguration by Emeric Switch'
-          )" />
+          <span v-html="applyItalicization('Teoria da magia por Adalbert Waffling')" />
         </li>
         <li>
           <span v-html="applyItalicization(
-            'One Thousand Magical Herbs and Fungi by Phyllida Spore'
+            'Guia de transfiguração para iniciantes por Emeric Switch'
           )" />
         </li>
         <li>
           <span v-html="applyItalicization(
-            'Magical Drafts and Potions by Arsenius Jigger'
+            'Mil ervas e fungos mágicos por Phyllida Spore'
           )" />
         </li>
         <li>
           <span v-html="applyItalicization(
-            'Fantastic Beasts and Where to Find Them by Newt Scamander'
+            'Bebidas e poções mágicas por Arsenius Jigger'
           )" />
         </li>
         <li>
           <span v-html="applyItalicization(
-            'The Dark Forces: A Guide to Self-Protection by Quentin Trimble'
+            'Animais fantásticos e onde habitam por Newt Scamander'
+          )" />
+        </li>
+        <li>
+          <span v-html="applyItalicization(
+            'As forças das trevas: Um guia de autoproteção por Quentin Trimble'
           )" />
         </li>
       </ul>
@@ -55,8 +60,14 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 
-defineProps(['title', 'surname']);
+
+const props = defineProps(['title', 'surname', 'gender']);
+
+const greetings = computed(() => {
+	return props.gender === 'F'? 'Prezada': 'Prezado';
+})
 
 const applyItalicization = (text: string) => {
   // Italicizing text in parentheses
@@ -67,8 +78,8 @@ const applyItalicization = (text: string) => {
 
   // Italicizing text following 'by'
   text = text.replace(
-    /by\s+([\w\s]+)/g,
-    '<span style="font-style: italic; font-size: 0.8em; color: #0c0434;">by $1</span>'
+    /por\s+([\w\s]+)/g,
+    '<span style="font-style: italic; font-size: 0.8em; color: #0c0434;">por $1</span>'
   );
 
   return text;

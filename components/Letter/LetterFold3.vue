@@ -2,43 +2,43 @@
   <div class="content__container">
     <div>
       <div class="content__signOff front__content">
-        <p>Yours sincerely,</p>
+        <p>Atenciosamente,</p>
         <p class="content__signature">Minerva McGonagall</p>
-        <p>Deputy Headmistress</p>
+        <p>Diretora substituta</p>
       </div>
       <div class="content__footer  front__content">
         <div class="content">
-          <h2>HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY</h2>
+          <h2>ESCOLA DE MAGIA E BRUXARIA DE HOGWARTS</h2>
           <p class="content__footerText">
-            Headmaster: Albus Dumbledore (Order of Merlin, First Class, Grand
-            Sorc., Chf. Warlock, Supreme Mugwump, International Confed. of
-            Wizards)
+            Diretor: Alvo Dumbledore (Orde de Merlim, Primeira Classe, Grande
+            Feiticeiro, Bruxo Chefe, Cacique Supremo, Confederação Internacional
+            de Bruxos)
           </p>
         </div>
       </div>
       <div class="content back__content back__content__footer page2-content">
         <h3 class="back__section__heading footer__heading">
-          OTHER EQUIPMENT
+          OUTROS EQUIPAMENTOS
         </h3>
         <ul class="back__footer__list">
           <li>
-            <span v-html="applyItalicization(' 1 Wand')" />
+            <span v-html="applyItalicization(' 1 varinha mágica')" />
           </li>
           <li>
-            <span v-html="applyItalicization(' 1 Cauldron (pewter, standard size 2)')" />
+            <span v-html="applyItalicization(' 1 caldeirão (estanho, tamanho padrão 2)')" />
           </li>
-          <li><span v-html="applyItalicization(' 1 Set glass or crystal phials')" /></li>
-          <li><span v-html="applyItalicization(' 1 Telescope')" /></li>
-          <li><span v-html="applyItalicization(' 1 Set brass scales')" /></li>
+          <li><span v-html="applyItalicization(' 1 conjunto de frascos')" /></li>
+          <li><span v-html="applyItalicization(' 1 telescópio')" /></li>
+          <li><span v-html="applyItalicization(' 1 balança de latão')" /></li>
         </ul>
         <h4>
           <span v-html="applyItalicization(
-            ' Students may also bring an owl OR a cat OR a toad'
+            ' Os alunos podem ainda trazer uma coruja OU um gato OU um sapo'
           )" />
         </h4>
         <h3 class="back__footer content__footerText">
           <span v-html="applyItalicization(
-            ' PARENTS ARE REMINDED THAT FIRST-YEARS ARE NOT ALLOWED THEIR OWN BROOMSTICKS'
+            ' LEMBRAMOS AOS PAIS QUE OS ALUNOS DO PRIMEIRO ANO NÃO PODEM USAR VASSOURAS PESSOAIS'
           )" />
         </h3>
       </div>
@@ -57,8 +57,8 @@ const applyItalicization = (text: string) => {
 
   // Italicizing text following 'by'
   text = text.replace(
-    /by\s+([\w\s]+)/g,
-    '<span style="font-style: italic; font-size: 0.8em; color: #0c0434;">by $1</span>'
+    /por\s+([\w\s]+)/g,
+    '<span style="font-style: italic; font-size: 0.8em; color: #0c0434;">por $1</span>'
   );
 
   return text;

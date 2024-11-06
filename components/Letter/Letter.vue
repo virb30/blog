@@ -5,7 +5,7 @@
         <LetterFold />
       </div>
       <div class="fold fold2" :class="{ folded: !fold2Unfolded }">
-        <LetterFold2 :title="title" :surname="surname" />
+        <LetterFold2 :title="title" :surname="surname" :gender="gender" />
       </div>
       <div class="sharp-fold fold fold3" :class="{ folded: !fold3Unfolded }" @click="handleFlip">
         <LetterFold3 />
@@ -23,7 +23,20 @@ const fold3Unfolded = ref(false);
 const flipped = ref(false);
 const animationDirection = ref("forward");
 
-
+defineProps({
+	title: {
+		type: String,
+		required: true
+	},
+	surname: {
+		type: String,
+		required: true
+	},
+	gender: {
+		type: String,
+		required: true
+	}
+})
 
 const handleUnfold = () => {
   console.log('flipped', flipped);
@@ -56,9 +69,6 @@ const handleFlip = () => {
     });
   }
 }
-
-const title = ref("Srta");
-const surname = ref("Surname");
 
 </script>
 

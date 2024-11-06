@@ -84,6 +84,10 @@
   display: none;
 }
 
+.content__paragraph {
+	text-indent: 2em;
+}
+
 /* Responsive adjustments for larger screens */
 @media screen and (min-width: 768px) {
   .letter__container {
@@ -285,7 +289,7 @@ li {
   .content__container {
     max-width: 800px;
     /* Set a maximum width for larger screens */
-    margin: 0 auto;
+    margin: 15px auto;
     /* Center the content horizontally */
   }
 

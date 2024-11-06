@@ -28,6 +28,7 @@
         "core-js": "^3.18.3",
         "firebase": "^9.16.0",
         "highlight.js": "^11.9.0",
+        "jwt-decode": "^4.0.0",
         "lru-cache": "^10.0.2",
         "nuxt": "^3.14.0",
         "pinia": "^2.0.29",
